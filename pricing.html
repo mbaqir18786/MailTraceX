@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="default">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MailTraceX - Subscription & Pricing Plans for Citizens, Universities, and Government Ministries | Ministry of Electronics & IT, Government of India.">
+  <title>Pricing &amp; Subscription Plans | MailTraceX | Ministry of Electronics &amp; IT</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --gov-navy-dark: #001B44;
+      --gov-navy: #0B3D91;
+      --gov-navy-light: #154D9E;
+      --gov-blue-subtle: #EBF3FC;
+      
+      --saffron: #FF9933;
+      --saffron-dark: #D46200;
+      --saffron-light: #FFF3E0;
+      
+      --india-green: #138808;
+      --india-green-dark: #0A5C05;
+      --india-green-light: #E8F5E9;
+      
+      --bg-body: #EEF2F6;
+      --bg-white: #FFFFFF;
+      --bg-card: #FFFFFF;
+      --bg-panel: #F8FAFC;
+      
+      --text-main: #111827;
+      --text-body: #2B3A4A;
+      --text-muted: #52667A;
+      
+      --border-light: #E2E8F0;
+      --border-mid: #CBD5E1;
+      --border-gov: #93B4D7;
+      
+      --alert-red: #B91C1C;
+      --alert-amber: #B45309;
+      
+      --font-body: 'Plus Jakarta Sans', Arial, sans-serif;
+      --font-hindi: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
+      --font-mono: 'Roboto Mono', Consolas, monospace;
+      
+      --radius: 4px;
+      --radius-lg: 8px;
+      --max-w: 1300px;
+    }
+
+    /* GIGW 3.0 CRYSTAL CLEAR HIGH CONTRAST THEME */
+    [data-theme="high-contrast"] {
+      --bg-body: #000000 !important;
+      --bg-white: #000000 !important;
+      --bg-card: #000000 !important;
+      --bg-panel: #000000 !important;
+      --gov-navy-dark: #000000 !important;
+      --gov-navy: #000000 !important;
+      --gov-navy-light: #111111 !important;
+      --gov-blue-subtle: #111111 !important;
+      --text-main: #FFFFFF !important;
+      --text-body: #FFFFFF !important;
+      --text-muted: #FFFF00 !important;
+      --border-light: #FFFFFF !important;
+      --border-mid: #FFFFFF !important;
+      --border-gov: #FFFF00 !important;
+      --saffron: #FFA500 !important;
+      --india-green: #00FF66 !important;
+      --alert-red: #FF4444 !important;
+    }
+
+    [data-theme="high-contrast"] body,
+    [data-theme="high-contrast"] header,
+    [data-theme="high-contrast"] nav,
+    [data-theme="high-contrast"] section,
+    [data-theme="high-contrast"] footer,
+    [data-theme="high-contrast"] .gov-topbar,
+    [data-theme="high-contrast"] .pricing-hero-box,
+    [data-theme="high-contrast"] .tier-card,
+    [data-theme="high-contrast"] .tier-feature-box,
+    [data-theme="high-contrast"] .gem-procure-box,
+    [data-theme="high-contrast"] .faq-card {
+      background-color: #000000 !important;
+      background: #000000 !important;
+      color: #FFFFFF !important;
+      border-color: #FFFFFF !important;
+    }
+
+    [data-theme="high-contrast"] h1,
+    [data-theme="high-contrast"] h2,
+    [data-theme="high-contrast"] h3,
+    [data-theme="high-contrast"] h4,
+    [data-theme="high-contrast"] strong,
+    [data-theme="high-contrast"] .portal-main-title,
+    [data-theme="high-contrast"] .tier-price,
+    [data-theme="high-contrast"] .tier-name,
+    [data-theme="high-contrast"] label {
+      color: #FFFF00 !important;
+    }
+
+    [data-theme="high-contrast"] p,
+    [data-theme="high-contrast"] span,
+    [data-theme="high-contrast"] .tier-desc,
+    [data-theme="high-contrast"] li {
+      color: #FFFFFF !important;
+    }
+
+    [data-theme="high-contrast"] a {
+      color: #00FFFF !important;
+      text-decoration: underline !important;
+    }
+
+    [data-theme="high-contrast"] .tool-btn,
+    [data-theme="high-contrast"] button,
+    [data-theme="high-contrast"] .btn-tier-action,
+    [data-theme="high-contrast"] .role-tab-btn {
+      background: #000000 !important;
+      color: #FFFF00 !important;
+      border: 2px solid #FFFF00 !important;
+    }
+
+    [data-theme="high-contrast"] .tool-btn:hover,
+    [data-theme="high-contrast"] .tool-btn.active,
+    [data-theme="high-contrast"] button:hover,
+    [data-theme="high-contrast"] .role-tab-btn.active,
+    [data-theme="high-contrast"] .btn-tier-action:hover {
+      background: #FFFF00 !important;
+      color: #000000 !important;
+      border-color: #FFFF00 !important;
+    }
+
+    [data-theme="high-contrast"] table,
+    [data-theme="high-contrast"] th,
+    [data-theme="high-contrast"] td {
+      border: 1px solid #FFFFFF !important;
+      background: #000000 !important;
+      color: #FFFFFF !important;
+    }
+
+    [data-theme="high-contrast"] th { color: #FFFF00 !important; }
+
+    [data-theme="high-contrast"] .tag-tier,
+    [data-theme="high-contrast"] .tag-status {
+      background: #000000 !important;
+      border: 2px solid #FFFF00 !important;
+      color: #FFFF00 !important;
+    }
+
+    [data-theme="high-contrast"] svg path,
+    [data-theme="high-contrast"] svg text,
+    [data-theme="high-contrast"] svg circle,
+    [data-theme="high-contrast"] svg rect {
+      fill: #FFFF00 !important;
+      stroke: #FFFF00 !important;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text-body);
+      background-color: var(--bg-body);
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a { color: var(--gov-navy); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* TOP TRICOLOR */
+    .top-tricolor {
+      height: 4px;
+      width: 100%;
+      display: flex;
+      position: sticky;
+      top: 0;
+      z-index: 1001;
+    }
+    .tricolor-stripe { flex: 1; height: 100%; }
+    .stripe-saffron { background: #FF9933; }
+    .stripe-white { background: #FFFFFF; }
+    .stripe-green { background: #138808; }
+
+    /* TOPBAR */
+    .gov-topbar {
+      background: #F1F5F9;
+      border-bottom: 1px solid var(--border-mid);
+      font-size: 12px;
+      padding: 5px 0;
+      color: var(--text-muted);
+    }
+    .topbar-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .gov-flag-identity {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+    .flag-icon {
+      display: inline-flex;
+      flex-direction: column;
+      width: 18px;
+      height: 12px;
+      border: 1px solid #CBD5E1;
+      border-radius: 1px;
+      overflow: hidden;
+    }
+    .flag-saffron { flex: 1; background: #FF9933; }
+    .flag-white { flex: 1; background: #FFFFFF; }
+    .flag-green { flex: 1; background: #138808; }
+
+    .topbar-actions {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .tool-btn {
+      background: #FFFFFF;
+      border: 1px solid var(--border-mid);
+      padding: 2px 7px;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      border-radius: 2px;
+      color: var(--text-body);
+      text-decoration: none !important;
+    }
+    .tool-btn:hover, .tool-btn.active {
+      background: var(--gov-navy);
+      color: #FFF;
+      border-color: var(--gov-navy);
+    }
+
+    /* HEADER */
+    .gov-header {
+      background: #FFFFFF;
+      border-bottom: 2px solid var(--border-mid);
+      padding: 10px 0;
+    }
+    .header-layout {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none !important;
+    }
+    .emblem-wrap { width: 50px; height: 60px; flex-shrink: 0; }
+    .emblem-wrap svg { width: 100%; height: 100%; }
+    .brand-text-block { display: flex; flex-direction: column; }
+    .dept-sub { font-size: 12px; font-weight: 700; color: var(--gov-navy); }
+    .dept-eng { font-size: 11.5px; font-weight: 600; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.2px; }
+    .portal-main-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--gov-navy);
+      line-height: 1.1;
+      margin-top: 2px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* NAVBAR */
+    .gov-navbar {
+      background: var(--gov-navy);
+      color: #FFF;
+    }
+    .nav-list {
+      display: flex;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    .nav-list li a {
+      display: block;
+      padding: 11px 16px;
+      color: #FFFFFF;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 3px solid transparent;
+      transition: all 0.15s ease;
+    }
+    .nav-list li a:hover, .nav-list li.active a {
+      background: #002255;
+      border-bottom-color: var(--saffron);
+      color: #FFF;
+    }
+    .nav-list li.portal-cta-user a { background: #138808; font-weight: 700; }
+    .nav-list li.portal-cta-inst a { background: #0d4ba8; font-weight: 700; }
+    .nav-list li.portal-cta-gov a { background: #991b1b; font-weight: 700; }
+
+    /* HERO BANNER */
+    .pricing-hero-box {
+      background: linear-gradient(135deg, #001B44 0%, #0B3D91 60%, #154D9E 100%);
+      color: #FFFFFF;
+      padding: 30px 24px;
+      border-radius: var(--radius);
+      margin: 20px 0;
+      border-bottom: 4px solid var(--saffron);
+      text-align: center;
+    }
+    .pricing-hero-box h1 { font-size: 24px; font-weight: 800; margin-bottom: 6px; }
+    .pricing-hero-box p { font-size: 13.5px; color: #D1E2FA; max-width: 800px; margin: 0 auto 16px; line-height: 1.5; }
+
+    /* ROLE SWITCHER TABS */
+    .role-switcher-wrap {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    .role-tab-btn {
+      background: #FFFFFF;
+      border: 1.5px solid var(--border-mid);
+      padding: 9px 18px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--gov-navy);
+      border-radius: 20px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s;
+    }
+    .role-tab-btn.active, .role-tab-btn:hover {
+      background: var(--gov-navy);
+      color: #FFFFFF;
+      border-color: var(--gov-navy);
+    }
+
+    /* 4-TIER PRICING CARDS GRID */
+    .pricing-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-bottom: 30px;
+    }
+    .tier-card {
+      background: #FFFFFF;
+      border: 1.5px solid var(--border-mid);
+      border-radius: var(--radius-lg);
+      padding: 22px 18px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+      position: relative;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .tier-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 18px rgba(11,61,145,0.12);
+      border-color: var(--gov-navy);
+    }
+    .tier-card.featured {
+      border-top: 5px solid var(--saffron-dark);
+      background: #FFFFFF;
+    }
+    .tier-card.featured::before {
+      content: "GOVERNMENT SUBSIDIZED / लोकप्रिय";
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--saffron-dark);
+      color: #FFF;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 2px 10px;
+      border-radius: 10px;
+      white-space: nowrap;
+    }
+
+    .tag-tier {
+      display: inline-block;
+      font-size: 10.5px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 3px;
+      margin-bottom: 10px;
+      width: fit-content;
+    }
+    .tag-tier.citizen { background: #E8F5E9; color: #15803D; border: 1px solid #86EFAC; }
+    .tag-tier.academic { background: #EBF3FC; color: #0B3D91; border: 1px solid #93B4D7; }
+    .tag-tier.ministry { background: #FEF2F2; color: #B91C1C; border: 1px solid #FCA5A5; }
+    .tag-tier.enterprise { background: #FFFBEB; color: #B45309; border: 1px solid #FDE68A; }
+
+    .tier-name { font-size: 17px; font-weight: 800; color: var(--gov-navy); margin-bottom: 6px; }
+    .tier-price-box {
+      margin: 12px 0;
+      padding: 10px 0;
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+    }
+    .tier-price { font-size: 26px; font-weight: 800; color: var(--gov-navy); line-height: 1; }
+    .tier-price-sub { font-size: 11px; color: var(--text-muted); font-weight: 600; margin-top: 4px; }
+    .tier-desc { font-size: 12px; color: var(--text-muted); margin-bottom: 14px; min-height: 48px; line-height: 1.5; }
+
+    .tier-feature-list {
+      list-style: none;
+      margin-bottom: 20px;
+      flex: 1;
+    }
+    .tier-feature-list li {
+      font-size: 12px;
+      color: var(--text-body);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: flex-start;
+      gap: 6px;
+    }
+    .tier-feature-list li .check-icon { color: var(--india-green); font-weight: 800; }
+
+    .btn-tier-action {
+      display: block;
+      text-align: center;
+      padding: 10px 14px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #FFFFFF;
+      border-radius: var(--radius);
+      text-decoration: none !important;
+      transition: opacity 0.15s;
+    }
+    .btn-tier-action:hover { opacity: 0.9; }
+    .btn-tier-action.citizen { background: var(--india-green); }
+    .btn-tier-action.academic { background: var(--gov-navy); }
+    .btn-tier-action.ministry { background: var(--alert-red); }
+    .btn-tier-action.enterprise { background: #D97706; }
+
+    /* GEM ONBOARDING NOTICE */
+    .gem-procure-box {
+      background: #FFFFFF;
+      border: 1.5px solid var(--border-mid);
+      border-left: 5px solid var(--gov-navy);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin-bottom: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .gem-logo-badge {
+      background: #FFFBEB;
+      border: 1px solid #FDE68A;
+      padding: 6px 12px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 800;
+      color: #B45309;
+    }
+
+    /* COMPARISON TABLE */
+    .comparison-section {
+      background: #FFFFFF;
+      border: 1.5px solid var(--border-mid);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-bottom: 30px;
+    }
+    .gov-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.5px;
+      margin-top: 14px;
+    }
+    .gov-table th {
+      background: #F1F5F9;
+      color: var(--gov-navy);
+      font-weight: 700;
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 2px solid var(--border-mid);
+    }
+    .gov-table td {
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--border-light);
+      vertical-align: middle;
+    }
+
+    /* FOOTER */
+    .gov-footer {
+      background: #001B44;
+      color: #CBD5E1;
+      font-size: 12.5px;
+      padding: 30px 0 16px;
+      margin-top: auto;
+      border-top: 3px solid var(--saffron);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #1E293B;
+      padding-bottom: 20px;
+    }
+    .footer-col h4 {
+      color: #FFFFFF;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      border-left: 3px solid var(--saffron);
+      padding-left: 8px;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 6px; }
+    .footer-col ul li a { color: #94A3B8; text-decoration: none; }
+    .footer-col ul li a:hover { color: #FFFFFF; text-decoration: underline; }
+    .footer-bottom { text-align: center; color: #64748B; font-size: 11.5px; }
+
+    @media(max-width: 1024px) {
+      .pricing-cards-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media(max-width: 650px) {
+      .pricing-cards-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP TRICOLOR -->
+  <div class="top-tricolor" aria-hidden="true">
+    <div class="tricolor-stripe stripe-saffron"></div>
+    <div class="tricolor-stripe stripe-white"></div>
+    <div class="tricolor-stripe stripe-green"></div>
+  </div>
+
+  <!-- TOPBAR -->
+  <div class="gov-topbar">
+    <div class="container">
+      <div class="topbar-flex">
+        <div class="gov-flag-identity">
+          <span class="flag-icon" aria-hidden="true">
+            <span class="flag-saffron"></span>
+            <span class="flag-white"></span>
+            <span class="flag-green"></span>
+          </span>
+          <span data-i18n="topGov">Government of India | भारत सरकार</span>
+          <span>&bull;</span>
+          <span data-i18n="topMinistry">Ministry of Electronics &amp; IT (MeitY)</span>
+        </div>
+        <ul class="topbar-actions">
+          <li>
+            <button class="tool-btn active" id="btn-lang-en" onclick="setLanguage('en')">English</button>
+            <button class="tool-btn" id="btn-lang-hi" onclick="setLanguage('hi')">हिन्दी</button>
+          </li>
+          <li><span>|</span></li>
+          <li><button class="tool-btn" id="btn-font-dec">A-</button></li>
+          <li><button class="tool-btn active" id="btn-font-norm">A</button></li>
+          <li><button class="tool-btn" id="btn-font-inc">A+</button></li>
+          <li><span>|</span></li>
+          <li><button class="tool-btn" id="btn-theme-contrast">High Contrast</button></li>
+          <li><span>|</span></li>
+          <li><a href="index.html" class="tool-btn" data-i18n="topHome">← Main Portal</a></li>
+          <li><a href="user.html" class="tool-btn" data-i18n="topUser">👤 Citizen</a></li>
+          <li><a href="institution.html" class="tool-btn" data-i18n="topInst">🏛️ DU Console</a></li>
+          <li><a href="gov.html" class="tool-btn" data-i18n="topGov">🛡️ Gov Review</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="gov-header" role="banner">
+    <div class="container">
+      <div class="header-layout">
+        <a href="index.html" class="brand-group" title="MailTraceX Pricing">
+          <div class="emblem-wrap">
+            <svg viewBox="0 0 100 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M50 15 C50 15 42 12 36 19 C31 24 33 34 33 42 C30 43 27 46 27 50 C27 54 30 56 32 58 C32 63 35 68 39 71 L39 76 C35 77 32 80 32 84 C32 89 36 92 40 92 L60 92 C64 92 68 89 68 84 C68 80 65 77 61 76 L61 71 C65 68 68 63 68 58 C70 56 73 54 73 50 C73 46 70 43 67 42 C67 34 69 24 64 19 C58 12 50 15 50 15 Z" fill="#0B3D91"/>
+              <path d="M44 26 C44 26 47 23 50 23 C53 23 56 26 56 26 C57 30 55 35 50 35 C45 35 43 30 44 26 Z" fill="#FFFFFF"/>
+              <circle cx="43" cy="27" r="1.5" fill="#0B3D91"/>
+              <circle cx="57" cy="27" r="1.5" fill="#0B3D91"/>
+              <rect x="22" y="93" width="56" height="11" rx="2" fill="#0B3D91"/>
+              <circle cx="50" cy="98.5" r="4.5" fill="#FFFFFF"/>
+              <circle cx="50" cy="98.5" r="2" fill="#0B3D91"/>
+              <path d="M30 96 L35 101 M35 96 L30 101" stroke="#FFFFFF" stroke-width="1.2"/>
+              <path d="M65 96 L70 101 M70 96 L65 101" stroke="#FFFFFF" stroke-width="1.2"/>
+              <rect x="18" y="105" width="64" height="4" rx="1" fill="#FF9933"/>
+              <text x="50" y="122" font-family="'Noto Sans Devanagari', Arial, sans-serif" font-size="11.5" font-weight="800" fill="#0B3D91" text-anchor="middle" letter-spacing="1.2">सत्यमेव जयते</text>
+            </svg>
+          </div>
+          <div class="brand-text-block">
+            <span class="dept-sub" data-i18n="hdrMinistry">Ministry of Electronics &amp; Information Technology | Government of India</span>
+            <span class="dept-eng" data-i18n="hdrSub">National Cyber Defense Subsidy &bull; GeM Contract Structure</span>
+            <div class="portal-main-title">
+              MailTraceX <span style="font-size: 15px; color: var(--text-muted); font-weight: 700;" data-i18n="hdrTitle">Subscription &amp; Pricing Framework</span>
+            </div>
+          </div>
+        </a>
+
+        <div style="text-align:right;">
+          <span class="gem-logo-badge">GeM Registered &bull; Cat: Cyber AI</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVBAR -->
+  <nav class="gov-navbar" aria-label="Main Navigation">
+    <div class="container">
+      <ul class="nav-list">
+        <li><a href="index.html" data-i18n="navHome">Home</a></li>
+        <li class="active"><a href="pricing.html" data-i18n="navPricing">Subscription Plans</a></li>
+        <li><a href="user.html" data-i18n="navUser">Citizen Portal</a></li>
+        <li><a href="institution.html" data-i18n="navInst">University IT (DU)</a></li>
+        <li><a href="gov.html" data-i18n="navGov">Gov Review Console</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container" style="flex: 1;">
+    
+    <!-- PRICING HERO BOX -->
+    <section class="pricing-hero-box">
+      <h1 data-i18n="heroTitle">Tailored Cybersecurity Plans for Every Sovereign Entity</h1>
+      <p data-i18n="heroDesc">
+        Differentiated pricing models designed for Indian Citizens, Higher Education Universities, Central Ministries/PSUs, and Critical Infrastructure Enterprises under Digital India guidelines.
+      </p>
+
+      <!-- ROLE SELECTOR TABS -->
+      <div class="role-switcher-wrap">
+        <button class="role-tab-btn active" onclick="filterTier('all', this)" data-i18n="tabAll">View All Plans</button>
+        <button class="role-tab-btn" onclick="filterTier('citizen', this)" data-i18n="tabCit">👤 Citizen (Free)</button>
+        <button class="role-tab-btn" onclick="filterTier('academic', this)" data-i18n="tabAcad">🏛️ Academic Institutions</button>
+        <button class="role-tab-btn" onclick="filterTier('ministry', this)" data-i18n="tabMin">🛡️ Ministries / Defense</button>
+        <button class="role-tab-btn" onclick="filterTier('enterprise', this)" data-i18n="tabEnt">🏢 Enterprise / PSUs</button>
+      </div>
+    </section>
+
+    <!-- 4 DIFFERENT PRICING CARDS -->
+    <section class="pricing-cards-grid" id="pricingGrid">
+      
+      <!-- Tier 1: Citizen -->
+      <div class="tier-card" data-tier="citizen">
+        <span class="tag-tier citizen" data-i18n="t1Tag">Sovereign Public Good</span>
+        <div class="tier-name" data-i18n="t1Name">Citizen Cyber Guard</div>
+        <div class="tier-price-box">
+          <div class="tier-price">₹0</div>
+          <div class="tier-price-sub" data-i18n="t1PriceSub">Free for All Indian Citizens</div>
+        </div>
+        <div class="tier-desc" data-i18n="t1Desc">
+          Aadhaar-linked personal email threat guardian and phishing protection for individual citizens &amp; students.
+        </div>
+        <ul class="tier-feature-list">
+          <li><span class="check-icon">✓</span> <span data-i18n="t1F1">Up to 500 emails/month personal inbox guard</span></li>
+          <li><span class="check-icon">✓</span> <span data-i18n="t1F2">Sub-second threat scanner (&lt;0.40s)</span></li>
+          <li><span class="check-icon">✓</span> <span data-i18n="t1F3">Aadhaar &amp; DigiLocker verified profile</span></li>
+          <li><span class="check-icon">✓</span> <span data-i18n="t1F4">1930 Cybercrime grievance auto-filing</span></li>
+          <li><span class="check-icon">✓</span> <span data-i18n="t1F5">Browser Guard Chrome extension</span></li>
+        </ul>
+        <a href="user.html" class="btn-tier-action citizen" data-i18n="t1Btn">Activate Citizen Shield (Free) →</a>
+      </div>
+
+      <!-- Tier 2: Academic & Universities (Featured) -->
+      <div class="tier-card featured" data-tier="academic">
+        <span class="tag-tier academic" data-i18n="t2Tag">UGC / AICTE Subsidized</span>
+        <div class="tier-name" data-i18n="t2Name">Academic Campus IT</div>
+        <div class="tier-price-box">
+          <div class="tier-price">₹4,999</div>
+          <div class="tier-price-sub" data-i18n="t2PriceSub">Per Campus / Month (Annual UGC Grant)</div>
+        </div>
+        <div class="tier-desc" data-i18n="t2Desc">
+          Complete institutional gateway defense for central/state universities (`du.ac.in`, `iitb.ac.in`, colleges).
+        </div>
+        <ul class="tier-feature-list">
+          <li><span class="check-icon">✓</span> <span data-i18n="t2F1">Unlimited student &amp; faculty inboxes</span></li>
+          <li><span class="check-icon">✓</span> <span data-i18n="t2F2">Live campus threat stream &amp; quarantine</span></li>
+          <li><span class="check-icon">✓</span> <span data-i18n="t2F3">DMARC/SPF policy enforcement (p=reject)</span></li>
+          <li><span class="check-icon">✓</span> <span data-i18n="t2F4">Section 65B Indian Evidence Act digital ledger</span></li>
+          <li><span class="check-icon">✓</span> <span data-i18n="t2F5">Section 21 Multi-AI Jury harness</span></li>
+          <li><span class="check-icon">✓</span> <span data-i18n="t2F6">Direct MeitY Gov Review escalation sync</span></li>
+        </ul>
+        <a href="institution.html" class="btn-tier-action academic" data-i18n="t2Btn">Launch University Console →</a>
+      </div>
+
+      <!-- Tier 3: Ministries & Defense -->
+      <div class="tier-card" data-tier="ministry">
+        <span class="tag-tier ministry" data-i18n="t3Tag">Sovereign Defense</span>
+        <div class="tier-name" data-i18n="t3Name">Government Nodal Command</div>
+        <div class="tier-price-box">
+          <div class="tier-price" data-i18n="t3Price">Ministry Grant</div>
+          <div class="tier-price-sub" data-i18n="t3PriceSub">Central MeitY / NIC Sovereign Budget</div>
+        </div>
+        <div class="tier-desc" data-i18n="t3Desc">
+          Inter-ministry sovereign command console for CERT-In, NCCC, state nodal officers, and defense entities.
+        </div>
+        <ul class="tier-feature-list">
+          <li><span class="check-icon">✓</span> <span data-i18n="t3F1">Multi-tenant national threat aggregation</span></li>
+          <li><span class="check-icon">✓</span> <span data-i18n="t3F2">Human Review Board with 24x7 clearance SLA</span></li>
+          <li><span class="check-icon">✓</span> <span data-i18n="t3F3">CERT-In Emergency Gazette Dispatch authority</span></li>
+          <li><span class="check-icon">✓</span> <span data-i18n="t3F4">TAXII 2.1 / STIX 2.1 automated threat feeds</span></li>
+          <li><span class="check-icon">✓</span> <span data-i18n="t3F5">NIXI national DNS sinkhole synchronization</span></li>
+          <li><span class="check-icon">✓</span> <span data-i18n="t3F6">PKI hardware token authentication</span></li>
+        </ul>
+        <a href="gov.html" class="btn-tier-action ministry" data-i18n="t3Btn">Access Gov Nodal Command →</a>
+      </div>
+
+      <!-- Tier 4: Enterprise & Banking -->
+      <div class="tier-card" data-tier="enterprise">
+        <span class="tag-tier enterprise" data-i18n="t4Tag">Critical Sector &amp; Banking</span>
+        <div class="tier-name" data-i18n="t4Name">Enterprise Infrastructure</div>
+        <div class="tier-price-box">
+          <div class="tier-price">₹14,999</div>
+          <div class="tier-price-sub" data-i18n="t4PriceSub">Per Organization / Month (GeM Direct)</div>
+        </div>
+        <div class="tier-desc" data-i18n="t4Desc">
+          Tailored for PSUs, scheduled commercial banks, and critical infrastructure organizations.
+        </div>
+        <ul class="tier-feature-list">
+          <li><span class="check-icon">✓</span> <span data-i18n="t4F1">Dedicated on-premise or NIC sovereign proxy</span></li>
+          <li><span class="check-icon">✓</span> <span data-i18n="t4F2">VIP Executive Wire Fraud / BEC protection</span></li>
+          <li><span class="check-icon">✓</span> <span data-i18n="t4F3">Custom AI fine-tuning for proprietary threats</span></li>
+          <li><span class="check-icon">✓</span> <span data-i18n="t4F4">Sub-second webhook integration</span></li>
+          <li><span class="check-icon">✓</span> <span data-i18n="t4F5">Quarterly RBI/SEBI compliance audit logs</span></li>
+        </ul>
+        <a href="https://gem.gov.in" target="_blank" rel="noopener" class="btn-tier-action enterprise" data-i18n="t4Btn">Procure via GeM Portal ↗</a>
+      </div>
+
+    </section>
+
+    <!-- GEM PROCUREMENT BANNER -->
+    <section class="gem-procure-box">
+      <div>
+        <h3 style="color:var(--gov-navy); font-size:16px;" data-i18n="gemTitle">🏛️ Government e-Marketplace (GeM) Procurement</h3>
+        <p style="font-size:12.5px; color:var(--text-muted); margin-top:2px;" data-i18n="gemDesc">
+          All institutional and ministry licenses of MailTraceX are pre-audited and available for direct single-click procurement under <strong>Rule 149 of GFR 2017</strong> on the GeM portal.
+        </p>
+      </div>
+      <a href="https://gem.gov.in" target="_blank" rel="noopener" class="tool-btn" style="padding:8px 16px; font-size:12.5px; background:var(--gov-navy); color:#FFF; border-color:var(--gov-navy);" data-i18n="btnGem">
+        View on GeM Marketplace ↗
+      </a>
+    </section>
+
+    <!-- DETAILED COMPARISON TABLE -->
+    <section class="comparison-section">
+      <h3 style="color:var(--gov-navy); font-size:16px;" data-i18n="compTitle">📋 Feature Comparison Across User Tiers</h3>
+      <table class="gov-table" aria-label="Feature Comparison">
+        <thead>
+          <tr>
+            <th data-i18n="thCap">Capability</th>
+            <th>Citizen (नागरिक)</th>
+            <th>University (संस्थान)</th>
+            <th>Gov Ministry (नोडल)</th>
+            <th>Enterprise / Bank</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Cost / Pricing</strong></td>
+            <td><strong style="color:var(--india-green);">₹0 (Free)</strong></td>
+            <td><strong>₹4,999/mo</strong></td>
+            <td><strong>Ministry Grant</strong></td>
+            <td><strong>₹14,999/mo</strong></td>
+          </tr>
+          <tr>
+            <td><strong>Sub-Second AI Inspection</strong></td>
+            <td>✓ Yes (&lt;0.4s)</td>
+            <td>✓ Yes (&lt;0.4s)</td>
+            <td>✓ Yes (&lt;0.4s)</td>
+            <td>✓ Dedicated SLA</td>
+          </tr>
+          <tr>
+            <td><strong>Auto-Quarantine (&gt;75 Score)</strong></td>
+            <td>✓ Individual Inbox</td>
+            <td>✓ Campus Gateway</td>
+            <td>✓ Multi-Tenant Sovereign</td>
+            <td>✓ Corporate Gateway</td>
+          </tr>
+          <tr>
+            <td><strong>Gov Human Review Board Sync</strong></td>
+            <td>✓ View Status</td>
+            <td>✓ Full Sync</td>
+            <td>✓ Adjudicate Decisions</td>
+            <td>✓ Direct Nodal Feed</td>
+          </tr>
+          <tr>
+            <td><strong>Section 65B Evidence Certificate</strong></td>
+            <td>Basic PDF</td>
+            <td>✓ Cryptographic Ledger</td>
+            <td>✓ Sovereign Sealed</td>
+            <td>✓ Audit Certified</td>
+          </tr>
+          <tr>
+            <td><strong>CERT-In Gazette Dispatch</strong></td>
+            <td>—</td>
+            <td>—</td>
+            <td>✓ Sovereign Authority</td>
+            <td>—</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="gov-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4 data-i18n="ftrPortals">Portal Services</h4>
+          <ul>
+            <li><a href="user.html">Citizen Cyber Portal</a></li>
+            <li><a href="institution.html">University IT Console</a></li>
+            <li><a href="gov.html">Gov Nodal Command</a></li>
+            <li><a href="pricing.html">Subscription Plans</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="ftrGov">Gov of India Portals</h4>
+          <ul>
+            <li><a href="https://india.gov.in" target="_blank" rel="noopener">National Portal of India</a></li>
+            <li><a href="https://meity.gov.in" target="_blank" rel="noopener">MeitY Official Portal</a></li>
+            <li><a href="https://gem.gov.in" target="_blank" rel="noopener">GeM Government Portal</a></li>
+            <li><a href="https://cybercrime.gov.in" target="_blank" rel="noopener">Cybercrime Portal (1930)</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="ftrPolicies">Policies &amp; Standards</h4>
+          <ul>
+            <li><a href="javascript:void(0)">Website Policy &amp; GIGW 3.0</a></li>
+            <li><a href="javascript:void(0)">GeM Procurement Guidelines</a></li>
+            <li><a href="javascript:void(0)">Section 65B Legal Evidence</a></li>
+            <li><a href="javascript:void(0)">Help / FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="ftrHelpdesk">Emergency Contacts</h4>
+          <ul>
+            <li><strong style="color:#FFF;">National Helpline: 1930 (Toll Free)</strong></li>
+            <li><span>MeitY Control Room: 011-24301843</span></li>
+            <li><span>Email: procurement@mailtracex.gov.in</span></li>
+            <li><span>National Informatics Centre (NIC), New Delhi</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="ftrCopyright">© 2026 MailTraceX | National Email Threat Intelligence &amp; Subscription Framework | Ministry of Electronics &amp; IT, Government of India</p>
+        <p style="margin-top: 4px;" data-i18n="ftrStandards">Standard GIGW 3.0 &bull; STQC Certified &bull; Hosted on National Informatics Centre (NIC) Sovereign Infrastructure</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      // Accessibility
+      const btnFontDec = document.getElementById('btn-font-dec');
+      const btnFontNorm = document.getElementById('btn-font-norm');
+      const btnFontInc = document.getElementById('btn-font-inc');
+      const btnThemeContrast = document.getElementById('btn-theme-contrast');
+
+      if (btnFontDec) btnFontDec.onclick = () => { document.documentElement.setAttribute('data-font-size', 'small'); [btnFontDec, btnFontNorm, btnFontInc].forEach(b => b.classList.remove('active')); btnFontDec.classList.add('active'); };
+      if (btnFontNorm) btnFontNorm.onclick = () => { document.documentElement.setAttribute('data-font-size', 'normal'); [btnFontDec, btnFontNorm, btnFontInc].forEach(b => b.classList.remove('active')); btnFontNorm.classList.add('active'); };
+      if (btnFontInc) btnFontInc.onclick = () => { document.documentElement.setAttribute('data-font-size', 'large'); [btnFontDec, btnFontNorm, btnFontInc].forEach(b => b.classList.remove('active')); btnFontInc.classList.add('active'); };
+      if (btnThemeContrast) btnThemeContrast.onclick = () => {
+        const isHC = document.documentElement.getAttribute('data-theme') === 'high-contrast';
+        document.documentElement.setAttribute('data-theme', isHC ? 'default' : 'high-contrast');
+        btnThemeContrast.classList.toggle('active', !isHC);
+      };
+
+      // Filter tiers
+      window.filterTier = function(tier, el) {
+        document.querySelectorAll('.role-tab-btn').forEach(b => b.classList.remove('active'));
+        if (el) el.classList.add('active');
+        document.querySelectorAll('.tier-card').forEach(card => {
+          if (tier === 'all' || card.getAttribute('data-tier') === tier) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      };
+
+      // ── ROLE-BASED AUTO-FILTER FROM URL PARAM (?role=user|institution|gov) ──
+      (function applyRoleFilter() {
+        const params = new URLSearchParams(window.location.search);
+        const role = (params.get('role') || '').toLowerCase();
+
+        const roleMap = {
+          user:        { tiers: ['citizen'],              banner: '👤 Citizen Portal Plans',           bannerSub: 'Plans for Indian Citizens under Digital India initiative.',                                         color: '#138808', tabKey: 'tabCit'  },
+          institution: { tiers: ['academic','enterprise'], banner: '🏛️ Academic & Enterprise Plans',    bannerSub: 'Subsidized plans for Universities, Colleges & Critical Infrastructure under UGC/AICTE.',             color: '#0B3D91', tabKey: null      },
+          gov:         { tiers: ['ministry'],              banner: '🛡️ Government Ministry Plans',       bannerSub: 'Sovereign Central Grant plans for Ministries, PSUs & Defence under MeitY Budget.',                  color: '#B91C1C', tabKey: 'tabMin'  },
+        };
+
+        if (!roleMap[role]) return;
+
+        const cfg = roleMap[role];
+
+        // Inject role banner above pricing grid
+        const pricingGrid = document.getElementById('pricingGrid');
+        const banner = document.createElement('div');
+        banner.id = 'roleBanner';
+        banner.innerHTML = `
+          <span style="font-size:17px;font-weight:800;color:${cfg.color};">${cfg.banner}</span>
+          <span style="font-size:12.5px;color:var(--text-body);margin-top:3px;display:block;">${cfg.bannerSub}</span>
+          <a href="javascript:history.back()" style="float:right;margin-top:-32px;font-size:12px;color:var(--gov-navy);font-weight:700;">← Back to Portal</a>
+        `;
+        banner.style.cssText = 'background:' + cfg.color + '10;border-left:5px solid ' + cfg.color + ';border-radius:6px;padding:14px 20px;margin-bottom:22px;overflow:hidden;font-family:var(--font-body);';
+        pricingGrid.parentNode.insertBefore(banner, pricingGrid);
+
+        // Show only relevant tiers
+        document.querySelectorAll('.tier-card').forEach(function(card) {
+          var tier = card.getAttribute('data-tier');
+          card.style.display = cfg.tiers.indexOf(tier) !== -1 ? 'flex' : 'none';
+        });
+
+        // Update active tab button
+        document.querySelectorAll('.role-tab-btn').forEach(function(btn) {
+          btn.classList.remove('active');
+        });
+        if (cfg.tabKey) {
+          var activeBtn = document.querySelector('.role-tab-btn[data-i18n="' + cfg.tabKey + '"]');
+          if (activeBtn) activeBtn.classList.add('active');
+        } else {
+          var allBtn = document.querySelector('.role-tab-btn[data-i18n="tabAll"]');
+          if (allBtn) allBtn.classList.add('active');
+        }
+      })();
+
+
+      const i18nPricing = {
+        en: {
+          topGov: "Government of India | भारत सरकार",
+          topMinistry: "Ministry of Electronics & IT (MeitY)",
+          topHome: "← Main Portal",
+          topUser: "👤 Citizen",
+          topInst: "🏛️ DU Console",
+          topGov: "🛡️ Gov Review",
+          hdrMinistry: "Ministry of Electronics & Information Technology | Government of India",
+          hdrSub: "National Cyber Defense Subsidy • GeM Contract Structure",
+          hdrTitle: "Subscription & Pricing Framework",
+          navHome: "Home",
+          navPricing: "Subscription Plans",
+          navUser: "Citizen Portal",
+          navInst: "University IT (DU)",
+          navGov: "Gov Review Console",
+          heroTitle: "Tailored Cybersecurity Plans for Every Sovereign Entity",
+          heroDesc: "Differentiated pricing models designed for Indian Citizens, Higher Education Universities, Central Ministries/PSUs, and Critical Infrastructure Enterprises under Digital India guidelines.",
+          tabAll: "View All Plans",
+          tabCit: "👤 Citizen (Free)",
+          tabAcad: "🏛️ Academic Institutions",
+          tabMin: "🛡️ Ministries / Defense",
+          tabEnt: "🏢 Enterprise / PSUs",
+          t1Tag: "Sovereign Public Good",
+          t1Name: "Citizen Cyber Guard",
+          t1PriceSub: "Free for All Indian Citizens",
+          t1Desc: "Aadhaar-linked personal email threat guardian and phishing protection for individual citizens & students.",
+          t1F1: "Up to 500 emails/month personal inbox guard",
+          t1F2: "Sub-second threat scanner (<0.40s)",
+          t1F3: "Aadhaar & DigiLocker verified profile",
+          t1F4: "1930 Cybercrime grievance auto-filing",
+          t1F5: "Browser Guard Chrome extension",
+          t1Btn: "Activate Citizen Shield (Free) →",
+          t2Tag: "UGC / AICTE Subsidized",
+          t2Name: "Academic Campus IT",
+          t2PriceSub: "Per Campus / Month (Annual UGC Grant)",
+          t2Desc: "Complete institutional gateway defense for central/state universities (`du.ac.in`, `iitb.ac.in`, colleges).",
+          t2F1: "Unlimited student & faculty inboxes",
+          t2F2: "Live campus threat stream & quarantine",
+          t2F3: "DMARC/SPF policy enforcement (p=reject)",
+          t2F4: "Section 65B Indian Evidence Act digital ledger",
+          t2F5: "Section 21 Multi-AI Jury harness",
+          t2F6: "Direct MeitY Gov Review escalation sync",
+          t2Btn: "Launch University Console →",
+          t3Tag: "Sovereign Defense",
+          t3Name: "Government Nodal Command",
+          t3Price: "Ministry Grant",
+          t3PriceSub: "Central MeitY / NIC Sovereign Budget",
+          t3Desc: "Inter-ministry sovereign command console for CERT-In, NCCC, state nodal officers, and defense entities.",
+          t3F1: "Multi-tenant national threat aggregation",
+          t3F2: "Human Review Board with 24x7 clearance SLA",
+          t3F3: "CERT-In Emergency Gazette Dispatch authority",
+          t3F4: "TAXII 2.1 / STIX 2.1 automated threat feeds",
+          t3F5: "NIXI national DNS sinkhole synchronization",
+          t3F6: "PKI hardware token authentication",
+          t3Btn: "Access Gov Nodal Command →",
+          t4Tag: "Critical Sector & Banking",
+          t4Name: "Enterprise Infrastructure",
+          t4PriceSub: "Per Organization / Month (GeM Direct)",
+          t4Desc: "Tailored for PSUs, scheduled commercial banks, and critical infrastructure organizations.",
+          t4F1: "Dedicated on-premise or NIC sovereign proxy",
+          t4F2: "VIP Executive Wire Fraud / BEC protection",
+          t4F3: "Custom AI fine-tuning for proprietary threats",
+          t4F4: "Sub-second webhook integration",
+          t4F5: "Quarterly RBI/SEBI compliance audit logs",
+          t4Btn: "Procure via GeM Portal ↗",
+          gemTitle: "🏛️ Government e-Marketplace (GeM) Procurement",
+          gemDesc: "All institutional and ministry licenses of MailTraceX are pre-audited and available for direct single-click procurement under Rule 149 of GFR 2017 on the GeM portal.",
+          btnGem: "View on GeM Marketplace ↗",
+          compTitle: "📋 Feature Comparison Across User Tiers",
+          thCap: "Capability",
+          ftrPortals: "Portal Services",
+          ftrGov: "Gov of India Portals",
+          ftrPolicies: "Policies & Standards",
+          ftrHelpdesk: "Emergency Contacts",
+          ftrCopyright: "© 2026 MailTraceX | National Email Threat Intelligence & Subscription Framework | Ministry of Electronics & IT, Government of India",
+          ftrStandards: "Standard GIGW 3.0 • STQC Certified • Hosted on National Informatics Centre (NIC) Sovereign Infrastructure"
+        },
+        hi: {
+          topGov: "भारत सरकार | Government of India",
+          topMinistry: "इलेक्ट्रॉनिक्स और सूचना प्रौद्योगिकी मंत्रालय (MeitY)",
+          topHome: "← मुख्य पोर्टल",
+          topUser: "👤 नागरिक पोर्टल",
+          topInst: "🏛️ DU कंसोल",
+          topGov: "🛡️ सरकारी समीक्षा",
+          hdrMinistry: "इलेक्ट्रॉनिक्स और सूचना प्रौद्योगिकी मंत्रालय | भारत सरकार",
+          hdrSub: "राष्ट्रीय साइबर सुरक्षा सब्सिडी • GeM अनुबंध ढांचा",
+          hdrTitle: "सदस्यता एवं शुल्क योजनाएं",
+          navHome: "मुख्य पृष्ठ",
+          navPricing: "शुल्क योजनाएं",
+          navUser: "नागरिक पोर्टल",
+          navInst: "विश्वविद्यालय IT",
+          navGov: "सरकारी समीक्षा",
+          heroTitle: "प्रत्येक संप्रभु इकाई के लिए अनुकूलित साइबर सुरक्षा योजनाएं",
+          heroDesc: "डिजिटल इंडिया दिशा-निर्देशों के तहत भारतीय नागरिकों, उच्च शिक्षण विश्वविद्यालयों, मंत्रालयों और उपक्रमों के लिए अलग-अलग मूल्य निर्धारण मॉडल।",
+          tabAll: "सभी योजनाएं देखें",
+          tabCit: "👤 नागरिक (मुफ्त)",
+          tabAcad: "🏛️ शैक्षणिक संस्थान",
+          tabMin: "🛡️ मंत्रालय / रक्षा",
+          tabEnt: "🏢 उद्यम / बैंक",
+          t1Tag: "संप्रभु लोक कल्याण",
+          t1Name: "नागरिक साइबर गार्ड",
+          t1PriceSub: "सभी भारतीय नागरिकों के लिए निःशुल्क",
+          t1Desc: "व्यक्तिगत नागरिकों एवं छात्रों के लिए आधार-लिंक्ड ईमेल खतरा गार्जियन एवं फ़िशिंग सुरक्षा।",
+          t1F1: "प्रति माह 500 ईमेल तक व्यक्तिगत इनबॉक्स सुरक्षा",
+          t1F2: "सब-सेकंड खतरा सत्यापन (<0.40s)",
+          t1F3: "आधार एवं डिजिलॉकर सत्यापित प्रोफाइल",
+          t1F4: "1930 राष्ट्रीय साइबर अपराध पोर्टल से सीधा जुड़ाव",
+          t1F5: "ब्राउज़र गार्ड क्रोम एक्सटेंशन",
+          t1Btn: "नागरिक सुरक्षा सक्रिय करें (मुफ्त) →",
+          t2Tag: "UGC / AICTE सब्सिडी प्राप्त",
+          t2Name: "शैक्षणिक परिसर IT",
+          t2PriceSub: "प्रति परिसर / माह (वार्षिक यूजीसी अनुदान)",
+          t2Desc: "केंद्रीय एवं राज्य विश्वविद्यालयों (`du.ac.in`, `iitb.ac.in`) के लिए संपूर्ण गेटवे सुरक्षा।",
+          t2F1: "असीमित छात्र एवं संकाय इनबॉक्स सुरक्षा",
+          t2F2: "लाइव कैंपस थ्रेट स्ट्रीम एवं क्वारंटाइन",
+          t2F3: "DMARC/SPF प्रवर्तन नीति (p=reject)",
+          t2F4: "भारतीय साक्ष्य अधिनियम धारा 65B डिजिटल लेजर",
+          t2F5: "धारा 21 मल्टी-एआई जूरी हार्नेस",
+          t2F6: "MeitY सरकारी मानव समीक्षा बोर्ड से लाइव सिंक",
+          t2Btn: "विश्वविद्यालय कंसोल खोलें →",
+          t3Tag: "संप्रभु राष्ट्रीय रक्षा",
+          t3Name: "सरकारी नोडल कमान",
+          t3Price: "मंत्रालय अनुदान",
+          t3PriceSub: "केंद्रीय MeitY / NIC संप्रभु बजट",
+          t3Desc: "CERT-In, NCCC और राज्य नोडल अधिकारियों के लिए अंतर-मंत्रालयी कमान कंसोल।",
+          t3F1: "मल्टी-टेनेंट राष्ट्रीय खतरा एकत्रीकरण",
+          t3F2: "24x7 निवारण SLA युक्त मानव समीक्षा बोर्ड",
+          t3F3: "CERT-In आपातकालीन राजपत्र (गजट) प्रेषण अधिकार",
+          t3F4: "TAXII 2.1 / STIX 2.1 स्वचालित थ्रेट फ़ीड्स",
+          t3F5: "NIXI राष्ट्रीय DNS सिंकहोल समन्वयन",
+          t3F6: "PKI हार्डवेयर टोकन प्रमाणीकरण",
+          t3Btn: "सरकारी नोडल कमान खोलें →",
+          t4Tag: "महत्वपूर्ण क्षेत्र एवं बैंकिंग",
+          t4Name: "उद्यम अवसंरचना",
+          t4PriceSub: "प्रति संगठन / माह (GeM पोर्टल सीधा अनुबंध)",
+          t4Desc: "सार्वजनिक उपक्रमों (PSUs) और अनुसूचित वाणिज्यिक बैंकों के लिए विशेष रूप से तैयार।",
+          t4F1: "समर्पित ऑन-प्रिमाइसेस या NIC संप्रभु प्रॉक्सी",
+          t4F2: "कार्यकारी वीआईपी वायर फ्रॉड / BEC सुरक्षा",
+          t4F3: "स्वामित्व वाले खतरों हेतु कस्टम AI फाइन-ट्यूनिंग",
+          t4F4: "सब-सेकंड वेबहुक इंटीग्रेशन",
+          t4F5: "त्रैमासिक RBI/SEBI अनुपालन ऑडिट लॉग",
+          t4Btn: "GeM पोर्टल के माध्यम से खरीदें ↗",
+          gemTitle: "🏛️ गवर्नमेंट ई-मार्केटप्लेस (GeM) खरीद",
+          gemDesc: "MailTraceX के सभी संस्थागत लाइसेंस GFR 2017 के नियम 149 के तहत GeM पोर्टल पर सीधे एकल-क्लिक खरीद के लिए उपलब्ध हैं।",
+          btnGem: "GeM मार्केटप्लेस पर देखें ↗",
+          compTitle: "📋 उपयोगकर्ता श्रेणियों में सुविधा तुलना",
+          thCap: "क्षमता",
+          ftrPortals: "पोर्टल सेवाएं",
+          ftrGov: "भारत सरकार के पोर्टल",
+          ftrPolicies: "नीतियां एवं मानक",
+          ftrHelpdesk: "आपातकालीन संपर्क",
+          ftrCopyright: "© 2026 MailTraceX | राष्ट्रीय ईमेल साइबर सुरक्षा एवं सदस्यता ढांचा | इलेक्ट्रॉनिक्स और सूचना प्रौद्योगिकी मंत्रालय, भारत सरकार",
+          ftrStandards: "GIGW 3.0 मानक • STQC प्रमाणित • राष्ट्रीय सूचना विज्ञान केंद्र (NIC) संप्रभु अवसंरचना पर होस्टेड"
+        }
+      };
+
+      window.setLanguage = function(lang) {
+        localStorage.setItem('mailtracex_lang', lang);
+        document.documentElement.lang = lang;
+        
+        var enBtn = document.getElementById('btn-lang-en');
+        var hiBtn = document.getElementById('btn-lang-hi');
+        if (enBtn && hiBtn) {
+          enBtn.classList.toggle('active', lang === 'en');
+          hiBtn.classList.toggle('active', lang === 'hi');
+        }
+
+        var dict = i18nPricing[lang] || i18nPricing.en;
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          var key = el.getAttribute('data-i18n');
+          if (dict[key]) {
+            el.innerHTML = dict[key];
+          }
+        });
+      };
+
+      var savedLang = localStorage.getItem('mailtracex_lang') || 'en';
+      setLanguage(savedLang);
+    })();
+  </script>
+  <script src="chatbot.js"></script>
+</body>
+</html>
