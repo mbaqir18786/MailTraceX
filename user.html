@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="default">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MailTraceX - Citizen Cyber Safety & Inbound Threat Guardian | Ministry of Electronics & IT, Government of India">
+  <title>Citizen Cyber Safety Portal | MailTraceX | Ministry of Electronics &amp; IT</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --gov-navy-dark: #001B44;
+      --gov-navy: #0B3D91;
+      --gov-navy-light: #154D9E;
+      --gov-blue-subtle: #EBF3FC;
+      
+      --saffron: #FF9933;
+      --saffron-dark: #D46200;
+      
+      --india-green: #138808;
+      --india-green-dark: #0A5C05;
+      --india-green-light: #E8F5E9;
+      
+      --bg-body: #EEF2F6;
+      --bg-white: #FFFFFF;
+      --bg-card: #FFFFFF;
+      --bg-panel: #F8FAFC;
+      
+      --text-main: #111827;
+      --text-body: #2B3A4A;
+      --text-muted: #52667A;
+      
+      --border-light: #E2E8F0;
+      --border-mid: #CBD5E1;
+      --border-gov: #93B4D7;
+      
+      --alert-red: #B91C1C;
+      --alert-red-bg: #FEF2F2;
+      --alert-amber: #B45309;
+      --alert-amber-bg: #FFFBEB;
+      
+      --font-body: 'Plus Jakarta Sans', Arial, sans-serif;
+      --font-hindi: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
+      --font-mono: 'Roboto Mono', Consolas, monospace;
+      
+      --radius: 4px;
+      --radius-lg: 8px;
+      --max-w: 1280px;
+    }
+
+    /* ==========================================================================
+       GIGW 3.0 CRYSTAL CLEAR HIGH CONTRAST THEME
+       ========================================================================== */
+    [data-theme="high-contrast"] {
+      --bg-body: #000000 !important;
+      --bg-white: #000000 !important;
+      --bg-card: #000000 !important;
+      --bg-panel: #000000 !important;
+      --gov-navy-dark: #000000 !important;
+      --gov-navy: #000000 !important;
+      --gov-navy-light: #111111 !important;
+      --gov-blue-subtle: #111111 !important;
+      --text-main: #FFFFFF !important;
+      --text-body: #FFFFFF !important;
+      --text-muted: #FFFF00 !important;
+      --border-light: #FFFFFF !important;
+      --border-mid: #FFFFFF !important;
+      --border-gov: #FFFF00 !important;
+      --saffron: #FFA500 !important;
+      --india-green: #00FF66 !important;
+      --alert-red: #FF4444 !important;
+    }
+
+    [data-theme="high-contrast"] body,
+    [data-theme="high-contrast"] header,
+    [data-theme="high-contrast"] nav,
+    [data-theme="high-contrast"] section,
+    [data-theme="high-contrast"] footer,
+    [data-theme="high-contrast"] .gov-topbar,
+    [data-theme="high-contrast"] .citizen-hero-box,
+    [data-theme="high-contrast"] .stat-card,
+    [data-theme="high-contrast"] .guardian-panel,
+    [data-theme="high-contrast"] .inbound-mail-card,
+    [data-theme="high-contrast"] .verify-result-box {
+      background-color: #000000 !important;
+      background: #000000 !important;
+      color: #FFFFFF !important;
+      border-color: #FFFFFF !important;
+    }
+
+    [data-theme="high-contrast"] h1,
+    [data-theme="high-contrast"] h2,
+    [data-theme="high-contrast"] h3,
+    [data-theme="high-contrast"] h4,
+    [data-theme="high-contrast"] strong,
+    [data-theme="high-contrast"] .portal-main-title,
+    [data-theme="high-contrast"] .stat-num,
+    [data-theme="high-contrast"] label {
+      color: #FFFF00 !important;
+    }
+
+    [data-theme="high-contrast"] p,
+    [data-theme="high-contrast"] span,
+    [data-theme="high-contrast"] .stat-lbl,
+    [data-theme="high-contrast"] li {
+      color: #FFFFFF !important;
+    }
+
+    [data-theme="high-contrast"] a {
+      color: #00FFFF !important;
+      text-decoration: underline !important;
+    }
+
+    [data-theme="high-contrast"] .tool-btn,
+    [data-theme="high-contrast"] button,
+    [data-theme="high-contrast"] .btn-verify-action {
+      background: #000000 !important;
+      color: #FFFF00 !important;
+      border: 2px solid #FFFF00 !important;
+    }
+
+    [data-theme="high-contrast"] .tool-btn:hover,
+    [data-theme="high-contrast"] .tool-btn.active,
+    [data-theme="high-contrast"] button:hover,
+    [data-theme="high-contrast"] .btn-verify-action:hover {
+      background: #FFFF00 !important;
+      color: #000000 !important;
+      border-color: #FFFF00 !important;
+    }
+
+    [data-theme="high-contrast"] input,
+    [data-theme="high-contrast"] textarea,
+    [data-theme="high-contrast"] select {
+      background: #000000 !important;
+      color: #FFFFFF !important;
+      border: 2px solid #FFFF00 !important;
+    }
+
+    [data-theme="high-contrast"] table,
+    [data-theme="high-contrast"] th,
+    [data-theme="high-contrast"] td {
+      border: 1px solid #FFFFFF !important;
+      background: #000000 !important;
+      color: #FFFFFF !important;
+    }
+
+    [data-theme="high-contrast"] th {
+      color: #FFFF00 !important;
+    }
+
+    [data-theme="high-contrast"] .citizen-badge,
+    [data-theme="high-contrast"] .aadhaar-status-tag,
+    [data-theme="high-contrast"] .tag-status {
+      background: #000000 !important;
+      border: 2px solid #FFFF00 !important;
+      color: #FFFF00 !important;
+    }
+
+    [data-theme="high-contrast"] svg path,
+    [data-theme="high-contrast"] svg text,
+    [data-theme="high-contrast"] svg circle,
+    [data-theme="high-contrast"] svg rect {
+      fill: #FFFF00 !important;
+      stroke: #FFFF00 !important;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text-body);
+      background-color: var(--bg-body);
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a { color: var(--gov-navy); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* TOP TRICOLOR BAND */
+    .top-tricolor {
+      height: 4px;
+      width: 100%;
+      display: flex;
+      position: sticky;
+      top: 0;
+      z-index: 1001;
+    }
+    .tricolor-stripe { flex: 1; height: 100%; }
+    .stripe-saffron { background: #FF9933; }
+    .stripe-white { background: #FFFFFF; }
+    .stripe-green { background: #138808; }
+
+    /* ACCESSIBILITY & IDENTITY */
+    .gov-topbar {
+      background: #F1F5F9;
+      border-bottom: 1px solid var(--border-mid);
+      font-size: 12px;
+      padding: 5px 0;
+      color: var(--text-muted);
+    }
+    .topbar-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .gov-flag-identity {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+    .flag-icon {
+      display: inline-flex;
+      flex-direction: column;
+      width: 18px;
+      height: 12px;
+      border: 1px solid #CBD5E1;
+      border-radius: 1px;
+      overflow: hidden;
+    }
+    .flag-saffron { flex: 1; background: #FF9933; }
+    .flag-white { flex: 1; background: #FFFFFF; }
+    .flag-green { flex: 1; background: #138808; }
+
+    .topbar-actions {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .tool-btn {
+      background: #FFFFFF;
+      border: 1px solid var(--border-mid);
+      padding: 2px 7px;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      border-radius: 2px;
+      color: var(--text-body);
+      text-decoration: none !important;
+    }
+    .tool-btn:hover, .tool-btn.active {
+      background: var(--gov-navy);
+      color: #FFF;
+      border-color: var(--gov-navy);
+    }
+
+    /* HEADER */
+    .gov-header {
+      background: #FFFFFF;
+      border-bottom: 2px solid var(--border-mid);
+      padding: 10px 0;
+    }
+    .header-layout {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none !important;
+    }
+    .emblem-wrap { width: 50px; height: 60px; flex-shrink: 0; }
+    .emblem-wrap svg { width: 100%; height: 100%; }
+    .brand-text-block { display: flex; flex-direction: column; }
+    .dept-sub {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--gov-navy);
+    }
+    .dept-eng {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.2px;
+    }
+    .portal-main-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--gov-navy);
+      line-height: 1.1;
+      margin-top: 2px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .citizen-badge {
+      background: #E8F5E9;
+      border: 1px solid #86EFAC;
+      padding: 2px 8px;
+      font-size: 11px;
+      font-weight: 800;
+      color: #15803D;
+      border-radius: 3px;
+    }
+
+    /* NAV */
+    .gov-navbar {
+      background: var(--gov-navy);
+      color: #FFF;
+    }
+    .nav-list {
+      display: flex;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    .nav-list li a {
+      display: block;
+      padding: 10px 16px;
+      color: #FFFFFF;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 3px solid transparent;
+      transition: all 0.15s ease;
+    }
+    .nav-list li a:hover, .nav-list li.active a {
+      background: #002255;
+      border-bottom-color: var(--saffron);
+      color: #FFF;
+    }
+    .nav-list li.portal-switch a {
+      background: #092c68;
+      border-left: 1px solid #1a498b;
+    }
+
+    /* CITIZEN PROFILE HERO (DIGILOCKER / AADHAAR STYLE) */
+    .citizen-hero-box {
+      background: linear-gradient(135deg, #001B44 0%, #0B3D91 100%);
+      color: #FFFFFF;
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin: 18px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      border-left: 5px solid var(--india-green);
+    }
+    .citizen-info h2 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+    .citizen-info p { font-size: 12.5px; color: #C8D8F0; }
+    .aadhaar-status-tag {
+      background: var(--india-green);
+      color: #FFF;
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 3px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* STATS 4-GRID */
+    .stats-4grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+    .stat-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-mid);
+      border-top: 3px solid var(--gov-navy);
+      border-radius: var(--radius);
+      padding: 14px;
+      text-align: center;
+    }
+    .stat-num {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--gov-navy);
+      margin-bottom: 2px;
+    }
+    .stat-lbl {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+
+    /* INBOUND INTERCEPTION LIVE GUARDIAN */
+    .guardian-panel {
+      background: #FFFFFF;
+      border: 1.5px solid var(--border-mid);
+      border-radius: var(--radius);
+      padding: 20px;
+      margin-bottom: 22px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    }
+    .guardian-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--gov-blue-subtle);
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .guardian-header h3 { font-size: 16px; font-weight: 800; color: var(--gov-navy); }
+
+    .inbound-live-stream {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .inbound-mail-card {
+      border: 1px solid var(--border-mid);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      background: #F8FAFC;
+      transition: all 0.2s;
+    }
+    .inbound-mail-card.blocked {
+      background: #FEF2F2;
+      border-color: #FCA5A5;
+      border-left: 5px solid var(--alert-red);
+    }
+    .inbound-mail-card.clean {
+      background: #F0FDF4;
+      border-color: #86EFAC;
+      border-left: 5px solid var(--india-green);
+    }
+    .inbound-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    /* SCANNER INPUT PANEL */
+    .scanner-form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 14px;
+    }
+    .form-group { margin-bottom: 14px; }
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--gov-navy);
+      margin-bottom: 5px;
+    }
+    .form-input, .form-textarea {
+      width: 100%;
+      padding: 9px 12px;
+      border: 1px solid var(--border-mid);
+      border-radius: var(--radius);
+      font-size: 13px;
+      font-family: inherit;
+    }
+    .form-textarea {
+      height: 110px;
+      resize: vertical;
+      font-family: var(--font-mono);
+      font-size: 11.5px;
+    }
+
+    .btn-verify-action {
+      background: var(--gov-navy);
+      color: #FFFFFF;
+      border: none;
+      padding: 10px 20px;
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: var(--radius);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-verify-action:hover { background: #002B49; }
+
+    /* VERIFICATION RESULT BOX */
+    .verify-result-box {
+      background: #FFFFFF;
+      border: 1px solid var(--border-mid);
+      border-radius: var(--radius);
+      padding: 16px;
+      min-height: 240px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* TABLES */
+    .gov-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.5px;
+    }
+    .gov-table th {
+      background: #F1F5F9;
+      color: var(--gov-navy);
+      font-weight: 700;
+      text-align: left;
+      padding: 9px 10px;
+      border-bottom: 2px solid var(--border-mid);
+    }
+    .gov-table td {
+      padding: 9px 10px;
+      border-bottom: 1px solid var(--border-light);
+      vertical-align: middle;
+    }
+    .gov-table tr:hover td { background: var(--gov-blue-subtle); }
+
+    .tag-status {
+      display: inline-block;
+      padding: 2px 7px;
+      font-size: 10.5px;
+      font-weight: 700;
+      border-radius: 3px;
+    }
+    .tag-red { background: #FEE2E2; color: #B91C1C; border: 1px solid #FCA5A5; }
+    .tag-green { background: #E8F5E9; color: #15803D; border: 1px solid #86EFAC; }
+    .tag-amber { background: #FEF3C7; color: #B45309; border: 1px solid #FDE68A; }
+
+    /* FOOTER */
+    .gov-footer {
+      background: #001B44;
+      color: #CBD5E1;
+      font-size: 12.5px;
+      padding: 30px 0 16px;
+      margin-top: auto;
+      border-top: 3px solid var(--saffron);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #1E293B;
+      padding-bottom: 20px;
+    }
+    .footer-col h4 {
+      color: #FFFFFF;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      border-left: 3px solid var(--saffron);
+      padding-left: 8px;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 6px; }
+    .footer-col ul li a { color: #94A3B8; text-decoration: none; }
+    .footer-col ul li a:hover { color: #FFFFFF; text-decoration: underline; }
+    .footer-bottom { text-align: center; color: #64748B; font-size: 11.5px; }
+
+    @media(max-width: 900px) {
+      .stats-4grid { grid-template-columns: repeat(2, 1fr); }
+      .scanner-form-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media(max-width: 600px) {
+      .stats-4grid { grid-template-columns: 1fr; }
+      .header-layout { flex-direction: column; align-items: flex-start; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP TRICOLOR BAND -->
+  <div class="top-tricolor" aria-hidden="true">
+    <div class="tricolor-stripe stripe-saffron"></div>
+    <div class="tricolor-stripe stripe-white"></div>
+    <div class="tricolor-stripe stripe-green"></div>
+  </div>
+
+  <!-- TOPBAR -->
+  <div class="gov-topbar">
+    <div class="container">
+      <div class="topbar-flex">
+        <div class="gov-flag-identity">
+          <span class="flag-icon" aria-hidden="true">
+            <span class="flag-saffron"></span>
+            <span class="flag-white"></span>
+            <span class="flag-green"></span>
+          </span>
+          <span data-i18n="topGov">Government of India | भारत सरकार</span>
+          <span>&bull;</span>
+          <span data-i18n="topMinistry">Ministry of Electronics &amp; IT (MeitY)</span>
+        </div>
+        <ul class="topbar-actions">
+          <li>
+            <button class="tool-btn active" id="btn-lang-en" onclick="setLanguage('en')">English</button>
+            <button class="tool-btn" id="btn-lang-hi" onclick="setLanguage('hi')">हिन्दी</button>
+          </li>
+          <li><span>|</span></li>
+          <li><button class="tool-btn" id="btn-font-dec">A-</button></li>
+          <li><button class="tool-btn active" id="btn-font-norm">A</button></li>
+          <li><button class="tool-btn" id="btn-font-inc">A+</button></li>
+          <li><span>|</span></li>
+          <li><button class="tool-btn" id="btn-theme-contrast">High Contrast</button></li>
+          <li><span>|</span></li>
+          <li><a href="index.html" class="tool-btn" data-i18n="topHome">← Main Portal</a></li>
+          <li><a href="gov.html" class="tool-btn" data-i18n="topGovCmd">🛡️ Gov Review Console</a></li>
+          <li><a href="institution.html" class="tool-btn" data-i18n="topInst">🏛️ DU Console</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="gov-header" role="banner">
+    <div class="container">
+      <div class="header-layout">
+        <a href="index.html" class="brand-group" title="MailTraceX Citizen Portal">
+          <div class="emblem-wrap">
+            <svg viewBox="0 0 100 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M50 15 C50 15 42 12 36 19 C31 24 33 34 33 42 C30 43 27 46 27 50 C27 54 30 56 32 58 C32 63 35 68 39 71 L39 76 C35 77 32 80 32 84 C32 89 36 92 40 92 L60 92 C64 92 68 89 68 84 C68 80 65 77 61 76 L61 71 C65 68 68 63 68 58 C70 56 73 54 73 50 C73 46 70 43 67 42 C67 34 69 24 64 19 C58 12 50 15 50 15 Z" fill="#0B3D91"/>
+              <path d="M44 26 C44 26 47 23 50 23 C53 23 56 26 56 26 C57 30 55 35 50 35 C45 35 43 30 44 26 Z" fill="#FFFFFF"/>
+              <circle cx="43" cy="27" r="1.5" fill="#0B3D91"/>
+              <circle cx="57" cy="27" r="1.5" fill="#0B3D91"/>
+              <rect x="22" y="93" width="56" height="11" rx="2" fill="#0B3D91"/>
+              <circle cx="50" cy="98.5" r="4.5" fill="#FFFFFF"/>
+              <circle cx="50" cy="98.5" r="2" fill="#0B3D91"/>
+              <path d="M30 96 L35 101 M35 96 L30 101" stroke="#FFFFFF" stroke-width="1.2"/>
+              <path d="M65 96 L70 101 M70 96 L65 101" stroke="#FFFFFF" stroke-width="1.2"/>
+              <rect x="18" y="105" width="64" height="4" rx="1" fill="#FF9933"/>
+              <text x="50" y="122" font-family="'Noto Sans Devanagari', Arial, sans-serif" font-size="11.5" font-weight="800" fill="#0B3D91" text-anchor="middle" letter-spacing="1.2">सत्यमेव जयते</text>
+            </svg>
+          </div>
+          <div class="brand-text-block">
+            <span class="dept-sub" data-i18n="hdrMinistry">Ministry of Electronics &amp; Information Technology | Government of India</span>
+            <span class="dept-eng" data-i18n="hdrSub">Citizen Cyber Safety Wing &bull; CERT-In</span>
+            <div class="portal-main-title">
+              MailTraceX <span style="font-size: 15px; color: var(--text-muted); font-weight: 700;" data-i18n="hdrTitle">Citizen Cyber Safety Portal</span>
+              <span class="citizen-badge" data-i18n="citizenBadge">Citizen Services</span>
+            </div>
+          </div>
+        </a>
+
+        <div style="display:flex; align-items:center; gap:12px;">
+          <div style="text-align:right;">
+            <div style="font-size:12px; font-weight:700; color:var(--gov-navy);" data-i18n="helplineTitle">Helpline 1930 (Toll Free)</div>
+            <div style="font-size:11px; color:var(--text-muted);" data-i18n="helplineSub">24x7 National Cybercrime Reporting</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVBAR -->
+  <nav class="gov-navbar" aria-label="Main Navigation">
+    <div class="container">
+      <ul class="nav-list">
+        <li><a href="index.html" data-i18n="navHome">Home</a></li>
+        <li class="active"><a href="user.html" data-i18n="navCitizen">Citizen Portal</a></li>
+        <li><a href="#guardian" data-i18n="navGuard">Inbound Mail Guard</a></li>
+        <li><a href="#scanner" data-i18n="navScan">Threat Scanner</a></li>
+        <li><a href="#complaints" data-i18n="navGrievance">Filed Grievances (1930)</a></li>
+        <li class="portal-switch"><a href="gov.html" data-i18n="navGov">🛡️ Gov Review Console</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="container" style="flex: 1;">
+    
+    <!-- CITIZEN PROFILE HERO BOX (DIGILOCKER / AADHAAR STYLE) -->
+    <section class="citizen-hero-box" aria-label="Citizen Identity">
+      <div class="citizen-info">
+        <h2 data-i18n="welcomeMsg">Welcome, M Baqir</h2>
+        <p>
+          <span data-i18n="emailLbl">Email:</span> <strong>mbaqir@somaiya.edu</strong> &bull;
+          <span data-i18n="aadhaarLbl">Aadhaar Reference:</span> <strong>XXXX-XXXX-4819</strong> &bull;
+          <span data-i18n="statusLbl">Security Status:</span> <span style="color:#86EFAC; font-weight:700;" data-i18n="statusVal">Fully Protected (Active MailGuard)</span>
+        </p>
+      </div>
+      <div class="aadhaar-status-tag" data-i18n="aadhaarPill">
+        <span>✓</span> Aadhaar &amp; DigiLocker Verified Citizen
+      </div>
+    </section>
+
+    <!-- STATS 4-GRID -->
+    <div class="stats-4grid">
+      <div class="stat-card">
+        <div class="stat-num" style="color:var(--alert-red);">1</div>
+        <div class="stat-lbl" data-i18n="statBlocked">Inbound Threat Blocked (&lt;1s)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" style="color:var(--alert-amber);">1</div>
+        <div class="stat-lbl" data-i18n="statReview">Under MeitY Human Review</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num" style="color:var(--india-green);">142</div>
+        <div class="stat-lbl" data-i18n="statClean">Clean Verified Emails</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">0.38s</div>
+        <div class="stat-lbl" data-i18n="statSpeed">Avg Threat Detection Speed</div>
+      </div>
+    </div>
+
+    <!-- INBOUND INTERCEPTION LIVE GUARDIAN -->
+    <section class="guardian-panel" id="guardian">
+      <div class="guardian-header">
+        <div>
+          <h3 data-i18n="guardTitle">🛡️ Inbound Mail Security Guardian (Real-Time Threat Interception)</h3>
+          <p style="font-size:12px; color:var(--text-muted); margin-top:2px;" data-i18n="guardDesc">
+            Every incoming email is verified in <strong>&lt; 1 second</strong>. High-risk emails are <strong>automatically blocked &amp; quarantined</strong> and sent to the Government Human Review Board for investigation.
+          </p>
+        </div>
+        <button class="tool-btn" style="padding:6px 12px; font-size:11.5px;" onclick="simulateInboundEmail()" data-i18n="btnTestInbound">
+          ⚡ Test Live Inbound Mail Interception
+        </button>
+      </div>
+
+      <div class="inbound-live-stream" id="inboundStream">
+        <!-- Blocked Mail Card (Sent to MeitY Review) -->
+        <div class="inbound-mail-card blocked">
+          <div class="inbound-meta">
+            <div>
+              <strong style="color:var(--alert-red); font-size:13px;" data-i18n="cardBlockedTitle">⛔ BLOCKED &amp; QUARANTINED BEFORE INBOX (Risk Score: 96/100)</strong>
+              <div style="font-size:11px; color:var(--text-muted); margin-top:2px;">Analyzed in <strong>0.38s</strong> &bull; Received: Today 11:48 IST</div>
+            </div>
+            <span class="tag-status tag-amber" data-i18n="statusGovReview">⚡ Under MeitY Gov Human Review</span>
+          </div>
+          <div style="font-size:13px; font-weight:700; color:var(--text-main); margin-bottom:4px;">
+            Subject: URGENT: Outstanding Tax Refund INR 48,500 - Submit Aadhaar &amp; Bank Details Within 24 Hours
+          </div>
+          <div style="font-size:12px; color:var(--text-muted); margin-bottom:6px;">
+            Sender: <code style="color:var(--alert-red);">notice-tax@incometax-gov.in.top</code> &bull; Origin IP: <code>194.26.29.114</code>
+          </div>
+          <div style="font-size:11.5px; color:#7F1D1D; background:#FEE2E2; padding:6px 10px; border-radius:3px;" data-i18n="blockedReason">
+            <strong>Reason Blocked:</strong> Spoofed domain imitating Income Tax Dept + Failed SPF/DKIM authentication + Phishing credential harvesting link. Escalated to Government Review Console.
+          </div>
+        </div>
+
+        <!-- Clean Mail Card -->
+        <div class="inbound-mail-card clean">
+          <div class="inbound-meta">
+            <div>
+              <strong style="color:var(--india-green); font-size:13px;" data-i18n="cardCleanTitle">✅ VERIFIED &amp; DELIVERED TO INBOX (Risk Score: 4/100)</strong>
+              <div style="font-size:11px; color:var(--text-muted); margin-top:2px;">Analyzed in <strong>0.22s</strong> &bull; Received: Today 09:15 IST</div>
+            </div>
+            <span class="tag-status tag-green" data-i18n="statusClean">Clean &amp; Authentic</span>
+          </div>
+          <div style="font-size:13px; font-weight:700; color:var(--text-main); margin-bottom:4px;">
+            Subject: Somaiya Vidyavihar University Semester Fee Receipt &amp; Hall Ticket
+          </div>
+          <div style="font-size:12px; color:var(--text-muted);">
+            Sender: <code style="color:var(--india-green);">accounts@somaiya.edu</code> &bull; DMARC: <code>Pass (p=reject)</code>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE INSTANT THREAT SCANNER -->
+    <section class="guardian-panel" id="scanner">
+      <div class="guardian-header">
+        <div>
+          <h3 data-i18n="scanTitle">🔍 Personal Email Threat Verification Tool</h3>
+          <p style="font-size:12px; color:var(--text-muted); margin-top:2px;" data-i18n="scanSub">
+            Paste suspicious email headers or sender addresses to perform an instant sub-second deep forensic check.
+          </p>
+        </div>
+      </div>
+
+      <div class="scanner-form-grid">
+        <div>
+          <div class="form-group">
+            <label for="senderInput" data-i18n="lblSender">Sender Address / प्रेषक पता:</label>
+            <input type="text" class="form-input" id="senderInput" value="support@sbi-reward-claim.online" placeholder="e.g. sender@domain.com">
+          </div>
+          <div class="form-group">
+            <label for="subjectInput" data-i18n="lblSubject">Subject Line / विषय:</label>
+            <input type="text" class="form-input" id="subjectInput" value="Congratulations! 5000 Reward Points Credited - Redeem Now" placeholder="e.g. KYC Update Required">
+          </div>
+          <div class="form-group">
+            <label for="headerInput" data-i18n="lblHeader">Raw Header / Email Content (Optional):</label>
+            <textarea class="form-textarea" id="headerInput" placeholder="Paste full RFC 822 headers or email body text here...">Received: from unknown (HELO sbi-reward-claim.online) (185.220.101.5)
+Authentication-Results: spf=fail; dkim=none; dmarc=fail
+Subject: Congratulations! 5000 Reward Points Credited - Redeem Now</textarea>
+          </div>
+          <button class="btn-verify-action" onclick="runCitizenScan()" data-i18n="btnRunScan">
+            ⚡ Scan in &lt; 1 Second Now
+          </button>
+        </div>
+
+        <div class="verify-result-box" id="scanResultBox">
+          <div style="text-align:center; color:var(--text-muted); font-size:13px;" data-i18n="scanPlaceholder">
+            <div style="font-size:32px; margin-bottom:6px;">🛡️</div>
+            Click <strong>"Scan in &lt; 1 Second Now"</strong> to trigger real-time AI forensics.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GRIEVANCE TABLE -->
+    <section class="guardian-panel" id="complaints">
+      <div class="guardian-header">
+        <div>
+          <h3 data-i18n="grievanceTitle">📋 National Cybercrime Grievance Tracker (1930 Linked)</h3>
+          <p style="font-size:12px; color:var(--text-muted); margin-top:2px;" data-i18n="grievanceSub">
+            Track complaints registered by <strong>M Baqir</strong> with National Cyber Crime Reporting Portal.
+          </p>
+        </div>
+      </div>
+
+      <table class="gov-table" aria-label="Filed Complaints">
+        <thead>
+          <tr>
+            <th data-i18n="thAck">Acknowledgement No.</th>
+            <th data-i18n="thType">Threat Type</th>
+            <th data-i18n="thSender">Sender Address</th>
+            <th data-i18n="thDate">Date Filed</th>
+            <th data-i18n="thStatus">Status</th>
+            <th data-i18n="thAssigned">Assigned Law Enforcement</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>NCRP-2026-98124</strong></td>
+            <td>Banking Phishing (Fake SBI Lure)</td>
+            <td><code>billing-update@sbi-online.cc</code></td>
+            <td>25-Sep-2026</td>
+            <td><span class="tag-status tag-green" data-i18n="stResolved">Resolved (Domain Blacklisted)</span></td>
+            <td>Cyber Crime Cell, Mumbai / MeitY</td>
+          </tr>
+          <tr>
+            <td><strong>NCRP-2026-94018</strong></td>
+            <td>Income Tax Refund Fraud</td>
+            <td><code>notice-tax@incometax-gov.in.top</code></td>
+            <td>25-Sep-2026</td>
+            <td><span class="tag-status tag-amber" data-i18n="stReview">Under Gov Human Review</span></td>
+            <td>CERT-In Incident Response Team</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="gov-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4 data-i18n="ftrCitizen">Citizen Services</h4>
+          <ul>
+            <li><a href="#guardian">Inbound Email Guardian</a></li>
+            <li><a href="#scanner">Instant Header Scanner</a></li>
+            <li><a href="#complaints">Track 1930 Complaints</a></li>
+            <li><a href="https://cybercrime.gov.in" target="_blank" rel="noopener">National Cyber Portal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="ftrGov">Gov of India Portals</h4>
+          <ul>
+            <li><a href="https://india.gov.in" target="_blank" rel="noopener">National Portal of India</a></li>
+            <li><a href="https://meity.gov.in" target="_blank" rel="noopener">MeitY Official Website</a></li>
+            <li><a href="https://digilocker.gov.in" target="_blank" rel="noopener">DigiLocker India</a></li>
+            <li><a href="https://uidai.gov.in" target="_blank" rel="noopener">UIDAI / Aadhaar Portal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="ftrPolicies">Policies &amp; Standards</h4>
+          <ul>
+            <li><a href="javascript:void(0)">Website Policy &amp; GIGW 3.0</a></li>
+            <li><a href="javascript:void(0)">Citizen Data Privacy Mandate</a></li>
+            <li><a href="javascript:void(0)">Section 65B Digital Evidence</a></li>
+            <li><a href="javascript:void(0)">Help / FAQs</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="ftrHelpdesk">Emergency Helpdesk</h4>
+          <ul>
+            <li><strong style="color:#FFF;">National Helpline: 1930 (Toll Free)</strong></li>
+            <li><span>Citizen Cyber Support: 1800-11-4000</span></li>
+            <li><span>Email: citizen.support@mailtracex.gov.in</span></li>
+            <li><span>Ministry of Electronics &amp; IT, New Delhi</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="ftrCopyright">© 2026 MailTraceX | National Citizen Cyber Safety &amp; Email Verification Portal | Ministry of Electronics &amp; IT, Government of India</p>
+        <p style="margin-top: 4px;" data-i18n="ftrStandards">Standard GIGW 3.0 &bull; STQC Certified &bull; Hosted on National Informatics Centre (NIC) Cloud</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      // Accessibility
+      const btnFontDec = document.getElementById('btn-font-dec');
+      const btnFontNorm = document.getElementById('btn-font-norm');
+      const btnFontInc = document.getElementById('btn-font-inc');
+      const btnThemeContrast = document.getElementById('btn-theme-contrast');
+
+      if (btnFontDec) btnFontDec.onclick = () => { document.documentElement.setAttribute('data-font-size', 'small'); [btnFontDec, btnFontNorm, btnFontInc].forEach(b => b.classList.remove('active')); btnFontDec.classList.add('active'); };
+      if (btnFontNorm) btnFontNorm.onclick = () => { document.documentElement.setAttribute('data-font-size', 'normal'); [btnFontDec, btnFontNorm, btnFontInc].forEach(b => b.classList.remove('active')); btnFontNorm.classList.add('active'); };
+      if (btnFontInc) btnFontInc.onclick = () => { document.documentElement.setAttribute('data-font-size', 'large'); [btnFontDec, btnFontNorm, btnFontInc].forEach(b => b.classList.remove('active')); btnFontInc.classList.add('active'); };
+      if (btnThemeContrast) btnThemeContrast.onclick = () => {
+        const isHC = document.documentElement.getAttribute('data-theme') === 'high-contrast';
+        document.documentElement.setAttribute('data-theme', isHC ? 'default' : 'high-contrast');
+        btnThemeContrast.classList.toggle('active', !isHC);
+      };
+
+      // Bilingual Translation Dictionary
+      const i18nUser = {
+        en: {
+          topGov: "Government of India | भारत सरकार",
+          topMinistry: "Ministry of Electronics & IT (MeitY)",
+          topHome: "← Main Portal",
+          topGovCmd: "🛡️ Gov Review Console",
+          topInst: "🏛️ DU Console",
+          hdrMinistry: "Ministry of Electronics & Information Technology | Government of India",
+          hdrSub: "Citizen Cyber Safety Wing • CERT-In",
+          hdrTitle: "Citizen Cyber Safety Portal",
+          citizenBadge: "Citizen Services",
+          helplineTitle: "Helpline 1930 (Toll Free)",
+          helplineSub: "24x7 National Cybercrime Reporting",
+          navHome: "Home",
+          navCitizen: "Citizen Portal",
+          navGuard: "Inbound Mail Guard",
+          navScan: "Threat Scanner",
+          navGrievance: "Filed Grievances (1930)",
+          navGov: "🛡️ Gov Review Console",
+          welcomeMsg: "Welcome, M Baqir",
+          emailLbl: "Email:",
+          aadhaarLbl: "Aadhaar Reference:",
+          statusLbl: "Security Status:",
+          statusVal: "Fully Protected (Active MailGuard)",
+          aadhaarPill: "<span>✓</span> Aadhaar & DigiLocker Verified Citizen",
+          statBlocked: "Inbound Threat Blocked (<1s)",
+          statReview: "Under MeitY Human Review",
+          statClean: "Clean Verified Emails",
+          statSpeed: "Avg Threat Detection Speed",
+          guardTitle: "🛡️ Inbound Mail Security Guardian (Real-Time Threat Interception)",
+          guardDesc: "Every incoming email is verified in <strong>< 1 second</strong>. High-risk emails are <strong>automatically blocked & quarantined</strong> and sent to the Government Human Review Board for investigation.",
+          btnTestInbound: "⚡ Test Live Inbound Mail Interception",
+          cardBlockedTitle: "⛔ BLOCKED & QUARANTINED BEFORE INBOX (Risk Score: 96/100)",
+          statusGovReview: "⚡ Under MeitY Gov Human Review",
+          blockedReason: "<strong>Reason Blocked:</strong> Spoofed domain imitating Income Tax Dept + Failed SPF/DKIM authentication + Phishing credential harvesting link. Escalated to Government Review Console.",
+          cardCleanTitle: "✅ VERIFIED & DELIVERED TO INBOX (Risk Score: 4/100)",
+          statusClean: "Clean & Authentic",
+          scanTitle: "🔍 Personal Email Threat Verification Tool",
+          scanSub: "Paste suspicious email headers or sender addresses to perform an instant sub-second deep forensic check.",
+          lblSender: "Sender Address / प्रेषक पता:",
+          lblSubject: "Subject Line / विषय:",
+          lblHeader: "Raw Header / Email Content (Optional):",
+          btnRunScan: "⚡ Scan in < 1 Second Now",
+          scanPlaceholder: "<div style='font-size:32px; margin-bottom:6px;'>🛡️</div>Click <strong>\"Scan in < 1 Second Now\"</strong> to trigger real-time AI forensics.",
+          grievanceTitle: "📋 National Cybercrime Grievance Tracker (1930 Linked)",
+          grievanceSub: "Track complaints registered by <strong>M Baqir</strong> with National Cyber Crime Reporting Portal.",
+          thAck: "Acknowledgement No.",
+          thType: "Threat Type",
+          thSender: "Sender Address",
+          thDate: "Date Filed",
+          thStatus: "Status",
+          thAssigned: "Assigned Law Enforcement",
+          stResolved: "Resolved (Domain Blacklisted)",
+          stReview: "Under Gov Human Review",
+          ftrCitizen: "Citizen Services",
+          ftrGov: "Gov of India Portals",
+          ftrPolicies: "Policies & Standards",
+          ftrHelpdesk: "Emergency Helpdesk",
+          ftrCopyright: "© 2026 MailTraceX | National Citizen Cyber Safety & Email Verification Portal | Ministry of Electronics & IT, Government of India",
+          ftrStandards: "Standard GIGW 3.0 • STQC Certified • Hosted on National Informatics Centre (NIC) Cloud"
+        },
+        hi: {
+          topGov: "भारत सरकार | Government of India",
+          topMinistry: "इलेक्ट्रॉनिक्स और सूचना प्रौद्योगिकी मंत्रालय (MeitY)",
+          topHome: "← मुख्य पोर्टल",
+          topGovCmd: "🛡️ सरकारी नोडल कमान",
+          topInst: "🏛️ संस्थान कंसोल",
+          hdrMinistry: "इलेक्ट्रॉनिक्स और सूचना प्रौद्योगिकी मंत्रालय | भारत सरकार",
+          hdrSub: "नागरिक साइबर सुरक्षा प्रभाग • सीईआरटी-इन",
+          hdrTitle: "नागरिक साइबर सुरक्षा पोर्टल",
+          citizenBadge: "नागरिक सेवा",
+          helplineTitle: "हेल्पलाइन 1930 (टोल फ्री)",
+          helplineSub: "24x7 राष्ट्रीय साइबर अपराध रिपोर्टिंग",
+          navHome: "मुख्य पृष्ठ",
+          navCitizen: "नागरिक पोर्टल",
+          navGuard: "इनबाउंड मेल सुरक्षा",
+          navScan: "खतरा सत्यापन टूल",
+          navGrievance: "दर्ज शिकायतें (1930)",
+          navGov: "🛡️ सरकारी नोडल कमान",
+          welcomeMsg: "नमस्ते, M Baqir",
+          emailLbl: "ईमेल:",
+          aadhaarLbl: "आधार संदर्भ:",
+          statusLbl: "सुरक्षा स्थिति:",
+          statusVal: "पूर्णतः सुरक्षित (सक्रिय मेलगार्ड)",
+          aadhaarPill: "<span>✓</span> आधार एवं डिजिलॉकर सत्यापित नागरिक",
+          statBlocked: "अवरुद्ध खतरा ईमेल (<1s)",
+          statReview: "सरकारी मानव समीक्षा में",
+          statClean: "सत्यापित सुरक्षित ईमेल",
+          statSpeed: "औसत खतरा पहचान गति",
+          guardTitle: "🛡️ इनबाउंड मेल सुरक्षा गार्जियन (लाइव खतरा अवरोधन)",
+          guardDesc: "प्रत्येक आने वाले ईमेल की <strong>< 1 सेकंड</strong> में जांच की जाती है। उच्च जोखिम वाले ईमेल को <strong>स्वचालित रूप से ब्लॉक एवं क्वारंटाइन</strong> कर सरकारी मानव समीक्षा बोर्ड को भेजा जाता है।",
+          btnTestInbound: "⚡ लाइव इनबाउंड मेल अवरोधन का परीक्षण करें",
+          cardBlockedTitle: "⛔ इनबॉक्स से पहले ब्लॉक एवं क्वारंटाइन (जोखिम स्कोर: 96/100)",
+          statusGovReview: "⚡ सरकारी मानव समीक्षा में",
+          blockedReason: "<strong>ब्लॉक करने का कारण:</strong> आयकर विभाग की फर्जी डोमेन + विफल SPF/DKIM प्रमाणीकरण + क्रेडेंशियल हार्वेस्टिंग लिंक। सरकारी समीक्षा कंसोल को अग्रेषित।",
+          cardCleanTitle: "✅ सत्यापित एवं इनबॉक्स में वितरित (जोखिम स्कोर: 4/100)",
+          statusClean: "सुरक्षित एवं प्रामाणिक",
+          scanTitle: "🔍 व्यक्तिगत ईमेल खतरा सत्यापन टूल",
+          scanSub: "त्वरित सब-सेकंड डीप फोरेंसिक जांच करने के लिए संदिग्ध ईमेल हेडर या प्रेषक का पता दर्ज करें।",
+          lblSender: "प्रेषक का ईमेल पता:",
+          lblSubject: "विषय पंक्ति:",
+          lblHeader: "रॉ हेडर / ईमेल सामग्री (वैकल्पिक):",
+          btnRunScan: "⚡ < 1 सेकंड में स्कैन करें",
+          scanPlaceholder: "<div style='font-size:32px; margin-bottom:6px;'>🛡️</div>रीयल-टाइम एआई फोरेंसिक जांच हेतु <strong>\"< 1 सेकंड में स्कैन करें\"</strong> पर क्लिक करें।",
+          grievanceTitle: "📋 राष्ट्रीय साइबर अपराध शिकायत ट्रैकर (1930 से संबद्ध)",
+          grievanceSub: "<strong>M Baqir</strong> द्वारा राष्ट्रीय साइबर अपराध रिपोर्टिंग पोर्टल पर दर्ज शिकायतों की स्थिति ट्रैक करें।",
+          thAck: "पावती संख्या",
+          thType: "खतरे का प्रकार",
+          thSender: "प्रेषक का पता",
+          thDate: "दर्ज दिनांक",
+          thStatus: "स्थिति",
+          thAssigned: "आवंटित सुरक्षा एजेंसी",
+          stResolved: "निस्तारित (डोमेन ब्लैकलिस्टेड)",
+          stReview: "सरकारी मानव समीक्षा में",
+          ftrCitizen: "नागरिक सेवाएं",
+          ftrGov: "भारत सरकार के पोर्टल",
+          ftrPolicies: "नीतियां एवं मानक",
+          ftrHelpdesk: "आपातकालीन हेल्पडेस्क",
+          ftrCopyright: "© 2026 MailTraceX | राष्ट्रीय नागरिक साइबर सुरक्षा एवं ईमेल सत्यापन पोर्टल | इलेक्ट्रॉनिक्स और सूचना प्रौद्योगिकी मंत्रालय, भारत सरकार",
+          ftrStandards: "GIGW 3.0 मानक • STQC प्रमाणित • राष्ट्रीय सूचना विज्ञान केंद्र (NIC) क्लाउड पर होस्टेड"
+        }
+      };
+
+      window.setLanguage = function(lang) {
+        localStorage.setItem('mailtracex_lang', lang);
+        document.documentElement.lang = lang;
+        
+        var enBtn = document.getElementById('btn-lang-en');
+        var hiBtn = document.getElementById('btn-lang-hi');
+        if (enBtn && hiBtn) {
+          enBtn.classList.toggle('active', lang === 'en');
+          hiBtn.classList.toggle('active', lang === 'hi');
+        }
+
+        var dict = i18nUser[lang] || i18nUser.en;
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          var key = el.getAttribute('data-i18n');
+          if (dict[key]) {
+            el.innerHTML = dict[key];
+          }
+        });
+      };
+
+      var savedLang = localStorage.getItem('mailtracex_lang') || 'en';
+      setLanguage(savedLang);
+
+      window.runCitizenScan = function() {
+        var sender = document.getElementById('senderInput').value.trim();
+        var subject = document.getElementById('subjectInput').value.trim();
+        var resBox = document.getElementById('scanResultBox');
+        var curLang = localStorage.getItem('mailtracex_lang') || 'en';
+
+        resBox.innerHTML = `
+          <div style="text-align:center; padding:20px;">
+            <div style="font-size:24px; color:var(--gov-navy);">⚡ ${curLang === 'hi' ? 'सब-सेकंड रीयल-टाइम स्कैनिंग जारी...' : 'Scanning in Sub-Second Real-Time...'}</div>
+            <div style="font-size:12px; color:var(--text-muted); margin-top:4px;">${curLang === 'hi' ? 'SPF, DKIM, DMARC, डोमेन आयु एवं एआई एनएलपी विश्लेषण' : 'Verifying SPF • DKIM • DMARC • Domain Age • AI NLP Heuristics'}</div>
+          </div>
+        `;
+
+        setTimeout(function(){
+          var isHighRisk = sender.includes('claim') || sender.includes('top') || sender.includes('online') || subject.includes('Reward') || subject.includes('Urgent');
+          var score = isHighRisk ? 95 : 12;
+          var statusTag = isHighRisk 
+            ? (curLang === 'hi' ? '⛔ उच्च जोखिम - गेटवे पर ऑटो-ब्लॉक्ड' : '⛔ HIGH RISK - AUTO-BLOCKED AT GATEWAY') 
+            : (curLang === 'hi' ? '✅ सुरक्षित एवं प्रामाणिक' : '✅ CLEAN & AUTHENTIC');
+          var statusClass = isHighRisk ? 'tag-red' : 'tag-green';
+
+          resBox.innerHTML = `
+            <div style="border-bottom:1px solid var(--border-light); padding-bottom:10px; margin-bottom:10px; display:flex; justify-content:space-between; align-items:center;">
+              <span class="tag-status ${statusClass}" style="font-size:12px; padding:4px 8px;">${statusTag}</span>
+              <span style="font-size:12px; font-weight:800; color:${isHighRisk ? 'var(--alert-red)' : 'var(--india-green)'};">${curLang === 'hi' ? 'जोखिम स्कोर:' : 'Threat Score:'} ${score}/100</span>
+            </div>
+            <div style="font-size:12px; line-height:1.6; color:var(--text-body);">
+              <strong>${curLang === 'hi' ? 'परीक्षित प्रेषक:' : 'Sender Tested:'}</strong> <code>${sender}</code><br>
+              <strong>${curLang === 'hi' ? 'निरीक्षण समय:' : 'Inspection Latency:'}</strong> 0.34 seconds<br>
+              <strong>${curLang === 'hi' ? 'SPF स्थिति:' : 'SPF Verification:'}</strong> <span style="color:${isHighRisk ? 'var(--alert-red)' : 'var(--india-green)'}; font-weight:700;">${isHighRisk ? 'Fail (SoftFail - Unauthorized IP)' : 'Pass'}</span><br>
+              <strong>${curLang === 'hi' ? 'DMARC प्रवर्तन:' : 'DMARC Status:'}</strong> <span style="color:${isHighRisk ? 'var(--alert-red)' : 'var(--india-green)'}; font-weight:700;">${isHighRisk ? 'Fail (p=reject policy active)' : 'Pass (p=reject)'}</span><br>
+              <strong>${curLang === 'hi' ? 'डोमेन आयु:' : 'Domain Age:'}</strong> ${isHighRisk ? '4 days old (High Risk)' : '5+ years old (Trusted)'}<br>
+              ${isHighRisk ? `<div style="margin-top:8px; padding:8px; background:#FEF2F2; border-left:3px solid var(--alert-red); color:#7F1D1D; font-size:11.5px;"><strong>${curLang === 'hi' ? 'कार्रवाई:' : 'Action Taken:'}</strong> ${curLang === 'hi' ? 'ईमेल को इनबॉक्स में पहुंचने से पहले ब्लॉक किया गया और MeitY सरकारी मानव समीक्षा बोर्ड को भेजा गया।' : 'Email blocked from recipient inbox and pushed to MeitY Gov Human Review Queue.'}</div>` : `<div style="margin-top:8px; padding:8px; background:#F0FDF4; border-left:3px solid var(--india-green); color:#14532D; font-size:11.5px;"><strong>${curLang === 'hi' ? 'कार्रवाई:' : 'Action Taken:'}</strong> ${curLang === 'hi' ? 'ईमेल सुरक्षित है और इनबॉक्स वितरण हेतु अनुमोदित है।' : 'Email is clean and verified safe for delivery.'}</div>`}
+            </div>
+          `;
+        }, 380);
+      };
+
+      window.simulateInboundEmail = function() {
+        var stream = document.getElementById('inboundStream');
+        var curLang = localStorage.getItem('mailtracex_lang') || 'en';
+        var simCard = document.createElement('div');
+        simCard.className = 'inbound-mail-card blocked';
+        simCard.innerHTML = `
+          <div class="inbound-meta">
+            <div>
+              <strong style="color:var(--alert-red); font-size:13px;">${curLang === 'hi' ? '⛔ 0.31 सेकंड में ब्लॉक किया गया (जोखिम स्कोर: 94/100)' : '⛔ BLOCKED IN 0.31s (Risk Score: 94/100)'}</strong>
+              <div style="font-size:11px; color:var(--text-muted); margin-top:2px;">${curLang === 'hi' ? 'अभी-अभी अवरुद्ध • गेटवे सब-सेकंड शील्ड' : 'Intercepted Just Now • Gateway Sub-Second Shield'}</div>
+            </div>
+            <span class="tag-status tag-amber">${curLang === 'hi' ? '⚡ सरकारी मानव समीक्षा में' : '⚡ Sent to MeitY Human Review'}</span>
+          </div>
+          <div style="font-size:13px; font-weight:700; color:var(--text-main); margin-bottom:4px;">
+            Subject: Electric Bill Arrears Notice - Disconnection in 12 Hours Unless Paid
+          </div>
+          <div style="font-size:12px; color:var(--text-muted); margin-bottom:6px;">
+            Sender: <code style="color:var(--alert-red);">billing@mahadiscom-bill-pay.click</code> &bull; Origin: Foreign Proxy
+          </div>
+          <div style="font-size:11.5px; color:#7F1D1D; background:#FEE2E2; padding:6px 10px; border-radius:3px;">
+            <strong>${curLang === 'hi' ? 'ब्लॉक का कारण:' : 'Reason Blocked:'}</strong> ${curLang === 'hi' ? 'बिजली बिल के नाम पर फ़िशिंग प्रयास + धमकी भरी भाषा। इनबॉक्स से पहले ब्लॉक किया गया।' : 'Utility spoofing phishing attempt + Coercive threat language. Blocked before inbox reach.'}
+          </div>
+        `;
+        stream.insertBefore(simCard, stream.firstChild);
+      };
+    })();
+  </script>
+</body>
+</html>

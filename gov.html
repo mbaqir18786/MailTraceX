@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="default">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MailTraceX - Government Nodal Command & Human Review Board | MeitY, Government of India">
+  <title>Government Nodal Command &amp; Human Review Board | MailTraceX MeitY</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Roboto+Mono:wght@500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --gov-navy-dark: #001B44;
+      --gov-navy: #0B3D91;
+      --gov-navy-light: #154D9E;
+      --gov-blue-subtle: #EBF3FC;
+      
+      --saffron: #FF9933;
+      --saffron-dark: #D46200;
+      
+      --india-green: #138808;
+      --india-green-dark: #0A5C05;
+      
+      --bg-body: #EEF2F6;
+      --bg-white: #FFFFFF;
+      --bg-card: #FFFFFF;
+      --bg-panel: #F8FAFC;
+      
+      --text-main: #111827;
+      --text-body: #2B3A4A;
+      --text-muted: #52667A;
+      
+      --border-light: #E2E8F0;
+      --border-mid: #CBD5E1;
+      --border-gov: #93B4D7;
+      
+      --alert-red: #B91C1C;
+      --alert-red-bg: #FEF2F2;
+      --alert-amber: #B45309;
+      --alert-amber-bg: #FFFBEB;
+      
+      --font-body: 'Plus Jakarta Sans', Arial, sans-serif;
+      --font-hindi: 'Noto Sans Devanagari', 'Plus Jakarta Sans', sans-serif;
+      --font-mono: 'Roboto Mono', Consolas, monospace;
+      
+      --radius: 4px;
+      --radius-lg: 8px;
+      --max-w: 1340px;
+    }
+
+    /* ==========================================================================
+       GIGW 3.0 CRYSTAL CLEAR HIGH CONTRAST THEME
+       ========================================================================== */
+    [data-theme="high-contrast"] {
+      --bg-body: #000000 !important;
+      --bg-white: #000000 !important;
+      --bg-card: #000000 !important;
+      --bg-panel: #000000 !important;
+      --gov-navy-dark: #000000 !important;
+      --gov-navy: #000000 !important;
+      --gov-navy-light: #111111 !important;
+      --gov-blue-subtle: #111111 !important;
+      --text-main: #FFFFFF !important;
+      --text-body: #FFFFFF !important;
+      --text-muted: #FFFF00 !important;
+      --border-light: #FFFFFF !important;
+      --border-mid: #FFFFFF !important;
+      --border-gov: #FFFF00 !important;
+      --saffron: #FFA500 !important;
+      --india-green: #00FF66 !important;
+      --alert-red: #FF4444 !important;
+    }
+
+    [data-theme="high-contrast"] body,
+    [data-theme="high-contrast"] header,
+    [data-theme="high-contrast"] nav,
+    [data-theme="high-contrast"] section,
+    [data-theme="high-contrast"] aside,
+    [data-theme="high-contrast"] footer,
+    [data-theme="high-contrast"] .gov-topbar,
+    [data-theme="high-contrast"] .admin-scope-strip,
+    [data-theme="high-contrast"] .workflow-info-card,
+    [data-theme="high-contrast"] .metric-card,
+    [data-theme="high-contrast"] .admin-sidebar,
+    [data-theme="high-contrast"] .main-stage-panel,
+    [data-theme="high-contrast"] .review-case-card,
+    [data-theme="high-contrast"] .case-card-header,
+    [data-theme="high-contrast"] .case-forensics-grid {
+      background-color: #000000 !important;
+      background: #000000 !important;
+      color: #FFFFFF !important;
+      border-color: #FFFFFF !important;
+    }
+
+    [data-theme="high-contrast"] h1,
+    [data-theme="high-contrast"] h2,
+    [data-theme="high-contrast"] h3,
+    [data-theme="high-contrast"] h4,
+    [data-theme="high-contrast"] strong,
+    [data-theme="high-contrast"] .portal-main-title,
+    [data-theme="high-contrast"] .metric-num,
+    [data-theme="high-contrast"] .sidebar-heading,
+    [data-theme="high-contrast"] label {
+      color: #FFFF00 !important;
+    }
+
+    [data-theme="high-contrast"] p,
+    [data-theme="high-contrast"] span,
+    [data-theme="high-contrast"] .metric-label,
+    [data-theme="high-contrast"] li {
+      color: #FFFFFF !important;
+    }
+
+    [data-theme="high-contrast"] a {
+      color: #00FFFF !important;
+      text-decoration: underline !important;
+    }
+
+    [data-theme="high-contrast"] .tool-btn,
+    [data-theme="high-contrast"] button,
+    [data-theme="high-contrast"] .btn-unblock,
+    [data-theme="high-contrast"] .btn-keep-blocked,
+    [data-theme="high-contrast"] .step-pill {
+      background: #000000 !important;
+      color: #FFFF00 !important;
+      border: 2px solid #FFFF00 !important;
+    }
+
+    [data-theme="high-contrast"] .tool-btn:hover,
+    [data-theme="high-contrast"] .tool-btn.active,
+    [data-theme="high-contrast"] button:hover,
+    [data-theme="high-contrast"] .btn-unblock:hover,
+    [data-theme="high-contrast"] .btn-keep-blocked:hover {
+      background: #FFFF00 !important;
+      color: #000000 !important;
+      border-color: #FFFF00 !important;
+    }
+
+    [data-theme="high-contrast"] input,
+    [data-theme="high-contrast"] textarea,
+    [data-theme="high-contrast"] select {
+      background: #000000 !important;
+      color: #FFFFFF !important;
+      border: 2px solid #FFFF00 !important;
+    }
+
+    [data-theme="high-contrast"] table,
+    [data-theme="high-contrast"] th,
+    [data-theme="high-contrast"] td {
+      border: 1px solid #FFFFFF !important;
+      background: #000000 !important;
+      color: #FFFFFF !important;
+    }
+
+    [data-theme="high-contrast"] th {
+      color: #FFFF00 !important;
+    }
+
+    [data-theme="high-contrast"] .nodal-badge,
+    [data-theme="high-contrast"] .human-review-status-pill,
+    [data-theme="high-contrast"] .tag-status,
+    [data-theme="high-contrast"] .badge-count {
+      background: #000000 !important;
+      border: 2px solid #FFFF00 !important;
+      color: #FFFF00 !important;
+    }
+
+    [data-theme="high-contrast"] svg path,
+    [data-theme="high-contrast"] svg text,
+    [data-theme="high-contrast"] svg circle,
+    [data-theme="high-contrast"] svg rect {
+      fill: #FFFF00 !important;
+      stroke: #FFFF00 !important;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text-body);
+      background-color: var(--bg-body);
+      line-height: 1.5;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    a { color: var(--gov-navy); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container {
+      width: 100%;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* TOP TRICOLOR */
+    .top-tricolor {
+      height: 4px;
+      width: 100%;
+      display: flex;
+      position: sticky;
+      top: 0;
+      z-index: 1001;
+    }
+    .tricolor-stripe { flex: 1; height: 100%; }
+    .stripe-saffron { background: #FF9933; }
+    .stripe-white { background: #FFFFFF; }
+    .stripe-green { background: #138808; }
+
+    /* TOPBAR */
+    .gov-topbar {
+      background: #F1F5F9;
+      border-bottom: 1px solid var(--border-mid);
+      font-size: 12px;
+      padding: 5px 0;
+      color: var(--text-muted);
+    }
+    .topbar-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .gov-flag-identity {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+    .flag-icon {
+      display: inline-flex;
+      flex-direction: column;
+      width: 18px;
+      height: 12px;
+      border: 1px solid #CBD5E1;
+      border-radius: 1px;
+      overflow: hidden;
+    }
+    .flag-saffron { flex: 1; background: #FF9933; }
+    .flag-white { flex: 1; background: #FFFFFF; }
+    .flag-green { flex: 1; background: #138808; }
+
+    .topbar-actions {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .tool-btn {
+      background: #FFFFFF;
+      border: 1px solid var(--border-mid);
+      padding: 2px 7px;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      border-radius: 2px;
+      color: var(--text-body);
+      text-decoration: none !important;
+    }
+    .tool-btn:hover, .tool-btn.active {
+      background: var(--gov-navy);
+      color: #FFF;
+      border-color: var(--gov-navy);
+    }
+
+    /* HEADER */
+    .gov-header {
+      background: #FFFFFF;
+      border-bottom: 2px solid var(--border-mid);
+      padding: 10px 0;
+    }
+    .header-layout {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .brand-group {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none !important;
+    }
+    .emblem-wrap { width: 50px; height: 60px; flex-shrink: 0; }
+    .emblem-wrap svg { width: 100%; height: 100%; }
+    .brand-text-block { display: flex; flex-direction: column; }
+    .dept-sub {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--gov-navy);
+    }
+    .dept-eng {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.2px;
+    }
+    .portal-main-title {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--gov-navy);
+      line-height: 1.1;
+      margin-top: 2px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .nodal-badge {
+      background: #FEF2F2;
+      border: 1px solid #FECACA;
+      padding: 2px 8px;
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--alert-red);
+      border-radius: 3px;
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .human-review-status-pill {
+      background: #FEF3C7;
+      border: 1.5px solid var(--alert-amber);
+      padding: 6px 12px;
+      border-radius: var(--radius);
+      text-align: right;
+    }
+
+    /* NAVBAR */
+    .gov-navbar {
+      background: var(--gov-navy);
+      color: #FFF;
+    }
+    .nav-list {
+      display: flex;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+    .nav-list li a {
+      display: block;
+      padding: 10px 16px;
+      color: #FFFFFF;
+      font-size: 13px;
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 3px solid transparent;
+      transition: all 0.15s ease;
+    }
+    .nav-list li a:hover, .nav-list li.active a {
+      background: #002255;
+      border-bottom-color: var(--saffron);
+      color: #FFF;
+    }
+    .nav-list li.portal-switch a {
+      background: #092c68;
+      border-left: 1px solid #1a498b;
+    }
+
+    /* SCOPE BANNER */
+    .admin-scope-strip {
+      background: var(--gov-navy-dark);
+      color: #D1E2FA;
+      padding: 9px 0;
+      font-size: 12.5px;
+      border-bottom: 2px solid var(--saffron);
+    }
+    .scope-flex {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* METRIC STATS ROW */
+    .metric-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 14px;
+      margin: 18px 0;
+    }
+    .metric-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-top: 3px solid var(--gov-navy);
+      border-radius: var(--radius);
+      padding: 14px;
+      text-align: center;
+    }
+    .metric-num {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--gov-navy);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .metric-label { font-size: 10.5px; font-weight: 700; color: var(--text-muted); text-transform: uppercase; }
+
+    /* WORKFLOW BANNER */
+    .workflow-info-card {
+      background: #F0FDF4;
+      border: 1.5px solid #86EFAC;
+      border-left: 5px solid var(--india-green);
+      border-radius: var(--radius);
+      padding: 14px 18px;
+      margin-bottom: 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .workflow-steps-inline {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12.5px;
+      flex-wrap: wrap;
+    }
+    .step-pill {
+      background: #FFFFFF;
+      border: 1px solid var(--border-mid);
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-weight: 700;
+      color: var(--gov-navy);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    /* LAYOUT: SIDEBAR + MAIN WORKSPACE */
+    .admin-workspace-grid {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      gap: 18px;
+      margin-bottom: 40px;
+    }
+    .admin-sidebar {
+      background: var(--bg-card);
+      border: 1px solid var(--border-mid);
+      border-radius: var(--radius);
+      padding: 10px 0;
+      height: fit-content;
+    }
+    .sidebar-heading {
+      padding: 6px 16px 8px;
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--gov-navy);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid var(--border-light);
+      margin-bottom: 4px;
+    }
+    .sidebar-list { list-style: none; }
+    .sidebar-item a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 9px 16px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--text-body);
+      border-left: 3px solid transparent;
+      transition: all 0.15s ease;
+    }
+    .sidebar-item.active a, .sidebar-item a:hover {
+      background: var(--gov-blue-subtle);
+      color: var(--gov-navy);
+      border-left-color: var(--gov-navy);
+      text-decoration: none;
+    }
+    .badge-count {
+      background: var(--alert-red);
+      color: #FFF;
+      font-size: 10px;
+      font-weight: 800;
+      padding: 1px 6px;
+      border-radius: 10px;
+    }
+
+    /* MAIN STAGE */
+    .main-stage-panel {
+      background: var(--bg-card);
+      border: 1px solid var(--border-mid);
+      border-radius: var(--radius);
+      padding: 22px;
+      min-height: 540px;
+    }
+    .panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--gov-blue-subtle);
+      margin-bottom: 18px;
+    }
+    .panel-header h2 { font-size: 16px; font-weight: 800; color: var(--gov-navy); }
+
+    /* REVIEW QUEUE CARDS */
+    .review-case-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-mid);
+      border-radius: var(--radius);
+      margin-bottom: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+      transition: border-color 0.2s;
+    }
+    .review-case-card:hover { border-color: var(--gov-navy); }
+    .case-card-header {
+      background: #F8FAFC;
+      border-bottom: 1px solid var(--border-light);
+      padding: 12px 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .case-card-body { padding: 16px; }
+    .case-forensics-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      background: #F8FAFC;
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius);
+      padding: 12px;
+      margin: 12px 0;
+      font-size: 12px;
+    }
+    .reason-list {
+      list-style: none;
+      margin: 8px 0;
+    }
+    .reason-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 12px;
+      margin-bottom: 6px;
+      color: #7F1D1D;
+      background: #FEF2F2;
+      padding: 6px 10px;
+      border-radius: 3px;
+      border-left: 3px solid var(--alert-red);
+    }
+
+    .case-actions-bar {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 10px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border-light);
+      margin-top: 12px;
+    }
+
+    .btn-unblock {
+      background: var(--india-green);
+      color: #FFF;
+      border: none;
+      padding: 8px 16px;
+      font-size: 12.5px;
+      font-weight: 700;
+      border-radius: var(--radius);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-unblock:hover { background: var(--india-green-dark); }
+
+    .btn-keep-blocked {
+      background: var(--alert-red);
+      color: #FFF;
+      border: none;
+      padding: 8px 16px;
+      font-size: 12.5px;
+      font-weight: 700;
+      border-radius: var(--radius);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-keep-blocked:hover { background: #991B1B; }
+
+    /* TABLES */
+    .gov-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.5px;
+    }
+    .gov-table th {
+      background: #F1F5F9;
+      color: var(--gov-navy);
+      font-weight: 700;
+      text-align: left;
+      padding: 9px 10px;
+      border-bottom: 2px solid var(--border-mid);
+    }
+    .gov-table td {
+      padding: 9px 10px;
+      border-bottom: 1px solid var(--border-light);
+      vertical-align: middle;
+    }
+    .gov-table tr:hover td { background: var(--gov-blue-subtle); }
+
+    .tag-status {
+      display: inline-block;
+      padding: 2px 7px;
+      font-size: 10.5px;
+      font-weight: 700;
+      border-radius: 3px;
+    }
+    .tag-red { background: #FEE2E2; color: #B91C1C; border: 1px solid #FCA5A5; }
+    .tag-green { background: #E8F5E9; color: #15803D; border: 1px solid #86EFAC; }
+    .tag-amber { background: #FEF3C7; color: #B45309; border: 1px solid #FDE68A; }
+
+    /* TOAST */
+    #govToast {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--gov-navy-dark);
+      color: #FFF;
+      padding: 12px 20px;
+      border-radius: var(--radius);
+      border-left: 4px solid var(--saffron);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      font-size: 13px;
+      font-weight: 600;
+      display: none;
+      z-index: 9999;
+    }
+
+    /* FOOTER */
+    .gov-footer {
+      background: #001B44;
+      color: #CBD5E1;
+      font-size: 12.5px;
+      padding: 30px 0 16px;
+      margin-top: auto;
+      border-top: 3px solid var(--saffron);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #1E293B;
+      padding-bottom: 20px;
+    }
+    .footer-col h4 {
+      color: #FFFFFF;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      border-left: 3px solid var(--saffron);
+      padding-left: 8px;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 6px; }
+    .footer-col ul li a { color: #94A3B8; text-decoration: none; }
+    .footer-col ul li a:hover { color: #FFFFFF; text-decoration: underline; }
+    .footer-bottom { text-align: center; color: #64748B; font-size: 11.5px; }
+
+    @media(max-width: 900px) {
+      .admin-workspace-grid { grid-template-columns: 1fr; }
+      .metric-row { grid-template-columns: repeat(2, 1fr); }
+      .case-forensics-grid { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media(max-width: 600px) {
+      .metric-row { grid-template-columns: 1fr; }
+      .header-layout { flex-direction: column; align-items: flex-start; }
+      .footer-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP TRICOLOR STRIP -->
+  <div class="top-tricolor" aria-hidden="true">
+    <div class="tricolor-stripe stripe-saffron"></div>
+    <div class="tricolor-stripe stripe-white"></div>
+    <div class="tricolor-stripe stripe-green"></div>
+  </div>
+
+  <!-- TOPBAR -->
+  <div class="gov-topbar">
+    <div class="container">
+      <div class="topbar-flex">
+        <div class="gov-flag-identity">
+          <span class="flag-icon" aria-hidden="true">
+            <span class="flag-saffron"></span>
+            <span class="flag-white"></span>
+            <span class="flag-green"></span>
+          </span>
+          <span data-i18n="topGov">Government of India | भारत सरकार</span>
+          <span>&bull;</span>
+          <span data-i18n="topMinistry">Ministry of Electronics &amp; IT (MeitY)</span>
+        </div>
+        <ul class="topbar-actions">
+          <li>
+            <button class="tool-btn active" id="btn-lang-en" onclick="setLanguage('en')">English</button>
+            <button class="tool-btn" id="btn-lang-hi" onclick="setLanguage('hi')">हिन्दी</button>
+          </li>
+          <li><span>|</span></li>
+          <li><button class="tool-btn" id="btn-font-dec">A-</button></li>
+          <li><button class="tool-btn active" id="btn-font-norm">A</button></li>
+          <li><button class="tool-btn" id="btn-font-inc">A+</button></li>
+          <li><span>|</span></li>
+          <li><button class="tool-btn" id="btn-theme-contrast">High Contrast</button></li>
+          <li><span>|</span></li>
+          <li><a href="index.html" class="tool-btn" data-i18n="topHome">← Main Portal</a></li>
+          <li><a href="institution.html" class="tool-btn" data-i18n="topInst">🏛️ DU Console</a></li>
+          <li><a href="user.html" class="tool-btn" data-i18n="topUser">👤 Citizen Portal</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="gov-header" role="banner">
+    <div class="container">
+      <div class="header-layout">
+        <a href="index.html" class="brand-group" title="MailTraceX Government Command">
+          <div class="emblem-wrap">
+            <svg viewBox="0 0 100 130" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M50 15 C50 15 42 12 36 19 C31 24 33 34 33 42 C30 43 27 46 27 50 C27 54 30 56 32 58 C32 63 35 68 39 71 L39 76 C35 77 32 80 32 84 C32 89 36 92 40 92 L60 92 C64 92 68 89 68 84 C68 80 65 77 61 76 L61 71 C65 68 68 63 68 58 C70 56 73 54 73 50 C73 46 70 43 67 42 C67 34 69 24 64 19 C58 12 50 15 50 15 Z" fill="#0B3D91"/>
+              <path d="M44 26 C44 26 47 23 50 23 C53 23 56 26 56 26 C57 30 55 35 50 35 C45 35 43 30 44 26 Z" fill="#FFFFFF"/>
+              <circle cx="43" cy="27" r="1.5" fill="#0B3D91"/>
+              <circle cx="57" cy="27" r="1.5" fill="#0B3D91"/>
+              <rect x="22" y="93" width="56" height="11" rx="2" fill="#0B3D91"/>
+              <circle cx="50" cy="98.5" r="4.5" fill="#FFFFFF"/>
+              <circle cx="50" cy="98.5" r="2" fill="#0B3D91"/>
+              <path d="M30 96 L35 101 M35 96 L30 101" stroke="#FFFFFF" stroke-width="1.2"/>
+              <path d="M65 96 L70 101 M70 96 L65 101" stroke="#FFFFFF" stroke-width="1.2"/>
+              <rect x="18" y="105" width="64" height="4" rx="1" fill="#FF9933"/>
+              <text x="50" y="122" font-family="'Noto Sans Devanagari', Arial, sans-serif" font-size="11.5" font-weight="800" fill="#0B3D91" text-anchor="middle" letter-spacing="1.2">सत्यमेव जयते</text>
+            </svg>
+          </div>
+          <div class="brand-text-block">
+            <span class="dept-sub" data-i18n="hdrMinistry">Ministry of Electronics &amp; Information Technology | Government of India</span>
+            <span class="dept-eng" data-i18n="hdrSub">Nodal Command &bull; Human Review Board &bull; CERT-In Level-1</span>
+            <div class="portal-main-title">
+              MailTraceX <span style="font-size: 15px; color: var(--text-muted); font-weight: 700;" data-i18n="hdrTitle">National Nodal Command &amp; Human Review Board</span>
+              <span class="nodal-badge" data-i18n="badgeRestricted">Restricted Access</span>
+            </div>
+          </div>
+        </a>
+
+        <div class="header-right">
+          <div class="human-review-status-pill">
+            <div style="font-size:12px; font-weight:800; color:var(--alert-amber);" data-i18n="hrbTitle">⚡ Human Review Board Active</div>
+            <div style="font-size:10.5px; color:var(--text-muted);"><span data-i18n="pendingLbl">Blocked Mail Escalations:</span> <strong id="pendingCountHeader" style="color:var(--alert-red);">3</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- NAVBAR -->
+  <nav class="gov-navbar" aria-label="Main Navigation">
+    <div class="container">
+      <ul class="nav-list">
+        <li><a href="index.html" data-i18n="navHome">Home</a></li>
+        <li class="active"><a href="gov.html" data-i18n="navGov">Gov Command &amp; Human Review</a></li>
+        <li><a href="institution.html" data-i18n="navInst">University IT (DU)</a></li>
+        <li><a href="user.html" data-i18n="navCitizen">Citizen Portal</a></li>
+        <li class="portal-switch"><a href="index.html#pipeline" data-i18n="navWf">How System Works</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- SCOPE STRIP -->
+  <div class="admin-scope-strip">
+    <div class="container">
+      <div class="scope-flex">
+        <div>
+          <span data-i18n="officerLbl">Review Officer:</span> <strong>Shri Rajesh Kumar (Nodal Review Lead, MeitY Cyber Wing)</strong> &nbsp;|&nbsp;
+          <span>Data Scope: <strong>National Multi-Tenant Threat Interception</strong></span>
+        </div>
+        <div>
+          <span style="color:#FFD59E; font-weight:700;" data-i18n="latencyStatus">Sub-Second Interception Engine: Active (Avg Latency: 380ms)</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="container" style="flex: 1;">
+    
+    <!-- METRICS -->
+    <div class="metric-row">
+      <div class="metric-card">
+        <div class="metric-num" style="color: var(--alert-red);" id="statBlocked">18,492</div>
+        <div class="metric-label" data-i18n="metricBlocked">Auto-Blocked Mails (&gt;75 Score)</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num" style="color: var(--alert-amber);" id="statPendingReview">3</div>
+        <div class="metric-label" data-i18n="metricPending">Pending Human Review</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num" style="color: var(--india-green);" id="statReleased">2,140</div>
+        <div class="metric-label" data-i18n="metricReleased">Unblocked &amp; Released (Clean)</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num">1,248</div>
+        <div class="metric-label" data-i18n="metricInst">Protected Institutions</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-num" style="color: var(--gov-navy);">380 ms</div>
+        <div class="metric-label" data-i18n="metricSpeed">Avg Inspection Latency</div>
+      </div>
+    </div>
+
+    <!-- WORKFLOW BANNER -->
+    <div class="workflow-info-card">
+      <div>
+        <strong style="color:var(--gov-navy-dark); font-size:13.5px;" data-i18n="wfCardTitle">⚡ MailTraceX 1-Second Interception &amp; Gov Human Review Protocol:</strong>
+        <p style="font-size:12px; color:var(--text-body); margin-top:2px;" data-i18n="wfCardDesc">
+          When an email arrives at a citizen or university, our engine analyzes it in <strong>&lt; 1 second</strong>. If risk score is high, it is <strong>instantly blocked</strong> and sent to this Gov Human Review Board where officers inspect forensic evidence and choose to <strong>Unblock &amp; Release</strong> or <strong>Maintain Block &amp; Issue Alert</strong>.
+        </p>
+      </div>
+      <div class="workflow-steps-inline">
+        <span class="step-pill" data-i18n="stepPill1">1️⃣ Inbound Mail Received</span>
+        <span class="step-pill" data-i18n="stepPill2">2️⃣ 1-Sec AI Risk Check</span>
+        <span class="step-pill" style="border-color:var(--alert-red); color:var(--alert-red);" data-i18n="stepPill3">3️⃣ Auto-Blocked (&gt;75)</span>
+        <span class="step-pill" style="border-color:var(--alert-amber); background:#FFFBEB;" data-i18n="stepPill4">4️⃣ Gov Human Review</span>
+      </div>
+    </div>
+
+    <!-- WORKSPACE -->
+    <div class="admin-workspace-grid">
+      
+      <!-- SIDEBAR -->
+      <aside class="admin-sidebar" aria-label="Console Navigation">
+        <div class="sidebar-heading" data-i18n="sideHeading">Gov Command &amp; Review</div>
+        <ul class="sidebar-list">
+          <li class="sidebar-item active" id="navHumanReview"><a href="javascript:void(0)" onclick="showGovTab('humanreview', this)"><span data-i18n="tabHRB">🚨 Human Review Board</span> <span class="badge-count" id="badgeReviewCount">3</span></a></li>
+          <li class="sidebar-item" id="navNatQueue"><a href="javascript:void(0)" onclick="showGovTab('natqueue', this)"><span data-i18n="tabQueue">📡 National Threat Queue</span></a></li>
+          <li class="sidebar-item" id="navLeaderboard"><a href="javascript:void(0)" onclick="showGovTab('leaderboard', this)"><span data-i18n="tabInst">🏛️ Institution Compliance</span></a></li>
+          <li class="sidebar-item" id="navHotspots"><a href="javascript:void(0)" onclick="showGovTab('hotspots', this)"><span data-i18n="tabHotspots">🗺️ State-Wise Hotspots</span></a></li>
+          <li class="sidebar-item" id="navGovCampaigns"><a href="javascript:void(0)" onclick="showGovTab('campaigns', this)"><span data-i18n="tabCampaigns">⚡ Campaign Clusters</span></a></li>
+          <li class="sidebar-item" id="navGazette"><a href="javascript:void(0)" onclick="showGovTab('gazette', this)"><span data-i18n="tabGazette">📜 CERT-In Gazette</span></a></li>
+          <li class="sidebar-item" id="navAuditLogs"><a href="javascript:void(0)" onclick="showGovTab('audit', this)"><span data-i18n="tabAudit">📋 Human Decision Audit</span></a></li>
+        </ul>
+      </aside>
+
+      <!-- MAIN STAGE -->
+      <section class="main-stage-panel" id="govMainStage">
+        <!-- Injected by JavaScript -->
+      </section>
+
+    </div>
+
+  </main>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="govToast" role="alert" aria-live="assertive"></div>
+
+  <!-- FOOTER -->
+  <footer class="gov-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4 data-i18n="ftrNodal">Nodal Command Services</h4>
+          <ul>
+            <li><a href="javascript:void(0)" onclick="showGovTab('humanreview')">High-Risk Human Review Queue</a></li>
+            <li><a href="javascript:void(0)" onclick="showGovTab('natqueue')">National Threat Telemetry</a></li>
+            <li><a href="javascript:void(0)" onclick="showGovTab('gazette')">CERT-In Emergency Gazette</a></li>
+            <li><a href="institution.html">Higher Education IT Portal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="ftrGov">Gov of India Portals</h4>
+          <ul>
+            <li><a href="https://india.gov.in" target="_blank" rel="noopener">National Portal of India</a></li>
+            <li><a href="https://meity.gov.in" target="_blank" rel="noopener">MeitY Official Website</a></li>
+            <li><a href="https://cert-in.org.in" target="_blank" rel="noopener">CERT-In India</a></li>
+            <li><a href="https://cybercrime.gov.in" target="_blank" rel="noopener">CyberCrime Reporting Portal (1930)</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="ftrPolicies">Review Protocols</h4>
+          <ul>
+            <li><a href="javascript:void(0)">Sub-Second Interception Protocol</a></li>
+            <li><a href="javascript:void(0)">False Positive Release Guidelines</a></li>
+            <li><a href="javascript:void(0)">Section 65B Forensics Custody</a></li>
+            <li><a href="javascript:void(0)">NIXI Sinkhole Enforcement</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 data-i18n="ftrHelpdesk">Emergency Helpdesk</h4>
+          <ul>
+            <li><strong style="color:#FFF;">National Helpline: 1930</strong></li>
+            <li><span>MeitY Cyber Wing: 011-24301843</span></li>
+            <li><span>Email: incident@cert-in.org.in</span></li>
+            <li><span>Electronics Niketan, CGO Complex, New Delhi</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-i18n="ftrCopyright">© 2026 MailTraceX | National Email Threat Intelligence &amp; Human Review Network | Ministry of Electronics &amp; IT, Government of India</p>
+        <p style="margin-top: 4px;" data-i18n="ftrStandards">Designed &amp; Developed for Government of India &bull; GIGW 3.0 Standard &bull; STQC Certified</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      // Accessibility
+      const btnFontDec = document.getElementById('btn-font-dec');
+      const btnFontNorm = document.getElementById('btn-font-norm');
+      const btnFontInc = document.getElementById('btn-font-inc');
+      const btnThemeContrast = document.getElementById('btn-theme-contrast');
+
+      if (btnFontDec) btnFontDec.onclick = () => { document.documentElement.setAttribute('data-font-size', 'small'); [btnFontDec, btnFontNorm, btnFontInc].forEach(b => b.classList.remove('active')); btnFontDec.classList.add('active'); };
+      if (btnFontNorm) btnFontNorm.onclick = () => { document.documentElement.setAttribute('data-font-size', 'normal'); [btnFontDec, btnFontNorm, btnFontInc].forEach(b => b.classList.remove('active')); btnFontNorm.classList.add('active'); };
+      if (btnFontInc) btnFontInc.onclick = () => { document.documentElement.setAttribute('data-font-size', 'large'); [btnFontDec, btnFontNorm, btnFontInc].forEach(b => b.classList.remove('active')); btnFontInc.classList.add('active'); };
+      if (btnThemeContrast) btnThemeContrast.onclick = () => {
+        const isHC = document.documentElement.getAttribute('data-theme') === 'high-contrast';
+        document.documentElement.setAttribute('data-theme', isHC ? 'default' : 'high-contrast');
+        btnThemeContrast.classList.toggle('active', !isHC);
+      };
+
+      // Review cases state (Blocked mails pending Gov Human review)
+      var reviewCases = [
+        {
+          id: 'MTX-REV-4081',
+          recipient: 'M Baqir (Citizen - Aadhaar Linked)',
+          recipientEmail: 'mbaqir@somaiya.edu',
+          tenant: 'Citizen Portal / Somaiya Vidyavihar',
+          sender: 'notice-tax@incometax-gov.in.top',
+          senderIp: '194.26.29.114 (Kyiv Host)',
+          subject: 'URGENT: Outstanding Tax Refund INR 48,500 - Submit Aadhaar & Bank Details Within 24 Hours',
+          riskScore: 96,
+          interceptTime: '0.38s (Auto-Blocked at Gateway)',
+          interceptTs: '25-Sep 11:48 IST',
+          spf: 'SoftFail (Unauthorized IP)',
+          dkim: 'None (Unsigned)',
+          dmarc: 'Fail (p=reject triggered)',
+          domainAge: '3 days (Registered 22-Sep-2026)',
+          reasons: [
+            'Impersonation of Income Tax Dept with deceptive lookalike domain (incometax-gov.in.top)',
+            'SPF/DKIM Authentication failed - sender IP 194.26.29.114 is unauthorized',
+            'High-urgency coercive NLP keywords: "immediate bank freeze", "within 24 hours"',
+            'Malicious harvesting hyperlink embedded directing to foreign phishing landing page'
+          ],
+          hash65b: 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855',
+          status: 'Pending Review'
+        },
+        {
+          id: 'MTX-REV-4082',
+          recipient: 'Registrar, University of Delhi',
+          recipientEmail: 'registrar@du.ac.in',
+          tenant: 'University of Delhi (du.ac.in)',
+          sender: 'dean-finance.du-ac-in@mail-server.cloud',
+          senderIp: '85.203.44.12 (Offshore Proxy)',
+          subject: 'Confidential: Revised UGC Grant Disbursement Wire Instructions',
+          riskScore: 92,
+          interceptTime: '0.41s (Auto-Blocked at Gateway)',
+          interceptTs: '25-Sep 10:15 IST',
+          spf: 'Fail',
+          dkim: 'Fail',
+          dmarc: 'Fail',
+          domainAge: '7 days old',
+          reasons: [
+            'VIP Executive Impersonation (Dean Finance spoofed via lookalike sender header)',
+            'Embedded PDF contains macro payload with outbound C2 callback',
+            'Bank account alteration lure detected in message body'
+          ],
+          hash65b: 'a71b29df99824c1308a0d9bc18fa09d012470192e109ab726189914728919a01',
+          status: 'Pending Review'
+        },
+        {
+          id: 'MTX-REV-4083',
+          recipient: 'Dean R&D, IIT Bombay',
+          recipientEmail: 'dean.rnd@iitb.ac.in',
+          tenant: 'IIT Bombay (iitb.ac.in)',
+          sender: 'fellowship-sanction@dst-gov-in.online',
+          senderIp: '103.14.26.89',
+          subject: 'DST Research Grant Sanction Order: Immediate KYC Verification Required',
+          riskScore: 89,
+          interceptTime: '0.35s (Auto-Blocked at Gateway)',
+          interceptTs: '25-Sep 09:30 IST',
+          spf: 'SoftFail',
+          dkim: 'None',
+          dmarc: 'Fail',
+          domainAge: '12 days old',
+          reasons: [
+            'Spoofing Dept of Science & Technology (DST) official circular format',
+            'Phishing link designed to harvest institutional single-sign-on (SSO) credentials'
+          ],
+          hash65b: '9b1480d19e95519efb3992b4514a38914b124890ab8291410982347102934812',
+          status: 'Pending Review'
+        }
+      ];
+
+      var auditLog = [
+        { id: 'MTX-REV-4078', mail: 'billing-update@sbi-online.cc', recipient: 'M Baqir', decision: 'Maintained Block & Blacklisted', officer: 'Shri Rajesh Kumar (MeitY)', ts: '25-Sep 08:20 IST', reason: 'SBI Bank Phishing Scam confirmed' },
+        { id: 'MTX-REV-4075', mail: 'newsletter@nature-publishing.com', recipient: 'prof.chem@du.ac.in', decision: 'Unblocked & Released', officer: 'Shri Rajesh Kumar (MeitY)', ts: '24-Sep 17:40 IST', reason: 'Legitimate academic subscription newsletter (False Positive cleared)' }
+      ];
+
+      const i18nGov = {
+        en: {
+          topGov: "Government of India | भारत सरकार",
+          topMinistry: "Ministry of Electronics & IT (MeitY)",
+          topHome: "← Main Portal",
+          topInst: "🏛️ DU Console",
+          topUser: "👤 Citizen Portal",
+          hdrMinistry: "Ministry of Electronics & Information Technology | Government of India",
+          hdrSub: "Nodal Command • Human Review Board • CERT-In Level-1",
+          hdrTitle: "National Nodal Command & Human Review Board",
+          badgeRestricted: "Restricted Access",
+          hrbTitle: "⚡ Human Review Board Active",
+          pendingLbl: "Blocked Mail Escalations:",
+          navHome: "Home",
+          navGov: "Gov Command & Human Review",
+          navInst: "University IT (DU)",
+          navCitizen: "Citizen Portal",
+          navWf: "How System Works",
+          officerLbl: "Review Officer:",
+          latencyStatus: "Sub-Second Interception Engine: Active (Avg Latency: 380ms)",
+          metricBlocked: "Auto-Blocked Mails (>75 Score)",
+          metricPending: "Pending Human Review",
+          metricReleased: "Unblocked & Released (Clean)",
+          metricInst: "Protected Institutions",
+          metricSpeed: "Avg Inspection Latency",
+          wfCardTitle: "⚡ MailTraceX 1-Second Interception & Gov Human Review Protocol:",
+          wfCardDesc: "When an email arrives at a citizen or university, our engine analyzes it in <strong>< 1 second</strong>. If risk score is high, it is <strong>instantly blocked</strong> and sent to this Gov Human Review Board where officers inspect forensic evidence and choose to <strong>Unblock & Release</strong> or <strong>Maintain Block & Issue Alert</strong>.",
+          stepPill1: "1️⃣ Inbound Mail Received",
+          stepPill2: "2️⃣ 1-Sec AI Risk Check",
+          stepPill3: "3️⃣ Auto-Blocked (>75)",
+          stepPill4: "4️⃣ Gov Human Review",
+          sideHeading: "Gov Command & Review",
+          tabHRB: "🚨 Human Review Board",
+          tabQueue: "📡 National Threat Queue",
+          tabInst: "🏛️ Institution Compliance",
+          tabHotspots: "🗺️ State-Wise Hotspots",
+          tabCampaigns: "⚡ Campaign Clusters",
+          tabGazette: "📜 CERT-In Gazette",
+          tabAudit: "📋 Human Decision Audit",
+          ftrNodal: "Nodal Command Services",
+          ftrGov: "Gov of India Portals",
+          ftrPolicies: "Review Protocols",
+          ftrHelpdesk: "Emergency Helpdesk",
+          ftrCopyright: "© 2026 MailTraceX | National Email Threat Intelligence & Human Review Network | Ministry of Electronics & IT, Government of India",
+          ftrStandards: "Designed & Developed for Government of India • GIGW 3.0 Standard • STQC Certified"
+        },
+        hi: {
+          topGov: "भारत सरकार | Government of India",
+          topMinistry: "इलेक्ट्रॉनिक्स और सूचना प्रौद्योगिकी मंत्रालय (MeitY)",
+          topHome: "← मुख्य पोर्टल",
+          topInst: "🏛️ संस्थान कंसोल",
+          topUser: "👤 नागरिक पोर्टल",
+          hdrMinistry: "इलेक्ट्रॉनिक्स और सूचना प्रौद्योगिकी मंत्रालय | भारत सरकार",
+          hdrSub: "नोडल कमान • मानव समीक्षा बोर्ड • सीईआरटी-इन स्तर-1",
+          hdrTitle: "राष्ट्रीय नोडल कमान एवं मानव समीक्षा बोर्ड",
+          badgeRestricted: "प्रतिबंधित पहुंच",
+          hrbTitle: "⚡ मानव समीक्षा बोर्ड सक्रिय",
+          pendingLbl: "लंबित अवरुद्ध ईमेल:",
+          navHome: "मुख्य पृष्ठ",
+          navGov: "सरकारी कमान एवं मानव समीक्षा",
+          navInst: "विश्वविद्यालय आईटी (DU)",
+          navCitizen: "नागरिक पोर्टल",
+          navWf: "कार्यप्रणाली",
+          officerLbl: "समीक्षा अधिकारी:",
+          latencyStatus: "सब-सेकंड अवरोधन इंजन: सक्रिय (औसत विलंबता: 380ms)",
+          metricBlocked: "ऑटो-अवरुद्ध ईमेल (>75 स्कोर)",
+          metricPending: "लंबित मानव समीक्षा",
+          metricReleased: "अनब्लॉक एवं जारी (स्वच्छ)",
+          metricInst: "संरक्षित संस्थान",
+          metricSpeed: "औसत निरीक्षण गति",
+          wfCardTitle: "⚡ 1-सेकंड अवरोधन एवं सरकारी मानव समीक्षा प्रोटोकॉल:",
+          wfCardDesc: "जब कोई ईमेल नागरिक या विश्वविद्यालय को आता है, इंजन <strong>< 1 सेकंड</strong> में जांच करता है। उच्च जोखिम होने पर उसे <strong>तुरंत ब्लॉक</strong> कर सरकारी समीक्षा बोर्ड को भेजा जाता है जहां अधिकारी <strong>अनब्लॉक एवं रिलीज</strong> या <strong>ब्लॉक बनाए रखें</strong> का निर्णय लेते हैं।",
+          stepPill1: "1️⃣ इनबाउंड ईमेल प्राप्ति",
+          stepPill2: "2️⃣ 1-सेकंड एआई जांच",
+          stepPill3: "3️⃣ ऑटो-ब्लॉक (>75)",
+          stepPill4: "4️⃣ सरकारी मानव समीक्षा",
+          sideHeading: "नोडल कमान एवं समीक्षा",
+          tabHRB: "🚨 मानव समीक्षा बोर्ड",
+          tabQueue: "📡 राष्ट्रीय थ्रेट कतार",
+          tabInst: "🏛️ संस्थान अनुपालन",
+          tabHotspots: "🗺️ राज्यवार हॉटस्पॉट",
+          tabCampaigns: "⚡ अभियान क्लस्टर",
+          tabGazette: "📜 सीईआरटी-इन गजट",
+          tabAudit: "📋 मानव निर्णय ऑडिट",
+          ftrNodal: "नोडल कमान सेवाएं",
+          ftrGov: "भारत सरकार के पोर्टल",
+          ftrPolicies: "समीक्षा प्रोटोकॉल",
+          ftrHelpdesk: "आपातकालीन हेल्पडेस्क",
+          ftrCopyright: "© 2026 MailTraceX | राष्ट्रीय ईमेल साइबर सुरक्षा एवं मानव समीक्षा नेटवर्क | इलेक्ट्रॉनिक्स और सूचना प्रौद्योगिकी मंत्रालय, भारत सरकार",
+          ftrStandards: "भारत सरकार हेतु विकसित • GIGW 3.0 मानक • STQC प्रमाणित"
+        }
+      };
+
+      window.setLanguage = function(lang) {
+        localStorage.setItem('mailtracex_lang', lang);
+        document.documentElement.lang = lang;
+        
+        var enBtn = document.getElementById('btn-lang-en');
+        var hiBtn = document.getElementById('btn-lang-hi');
+        if (enBtn && hiBtn) {
+          enBtn.classList.toggle('active', lang === 'en');
+          hiBtn.classList.toggle('active', lang === 'hi');
+        }
+
+        var dict = i18nGov[lang] || i18nGov.en;
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          var key = el.getAttribute('data-i18n');
+          if (dict[key]) {
+            el.innerHTML = dict[key];
+          }
+        });
+        showGovTab('humanreview');
+      };
+
+      function showToast(msg) {
+        var t = document.getElementById('govToast');
+        t.innerText = msg;
+        t.style.display = 'block';
+        setTimeout(function(){ t.style.display = 'none'; }, 4500);
+      }
+
+      window.showGovTab = function(tab, el) {
+        document.querySelectorAll('.sidebar-item').forEach(x => x.classList.remove('active'));
+        if (el && el.parentElement) el.parentElement.classList.add('active');
+        var ms = document.getElementById('govMainStage');
+        var html = '';
+        if (tab === 'humanreview') html = renderHumanReviewBoard();
+        else if (tab === 'natqueue') html = renderNatQueue();
+        else if (tab === 'leaderboard') html = renderLeaderboard();
+        else if (tab === 'hotspots') html = renderHotspots();
+        else if (tab === 'campaigns') html = renderGovCampaigns();
+        else if (tab === 'gazette') html = renderGazette();
+        else if (tab === 'audit') html = renderAuditLogs();
+        ms.innerHTML = html;
+      };
+
+      function updateCounts() {
+        var pending = reviewCases.filter(c => c.status === 'Pending Review').length;
+        document.getElementById('pendingCountHeader').innerText = pending;
+        document.getElementById('badgeReviewCount').innerText = pending;
+        document.getElementById('statPendingReview').innerText = pending;
+      }
+
+      function renderHumanReviewBoard() {
+        var curLang = localStorage.getItem('mailtracex_lang') || 'en';
+        var pendingCases = reviewCases.filter(c => c.status === 'Pending Review');
+        if (pendingCases.length === 0) {
+          return `
+            <div class="panel-header">
+              <h2>${curLang === 'hi' ? '🚨 उच्च जोखिम ईमेल मानव समीक्षा बोर्ड' : '🚨 High-Risk Mail Human Review Board'}</h2>
+              <span style="font-size:12px; color:var(--india-green); font-weight:700;">✅ ${curLang === 'hi' ? 'सभी अवरुद्ध ईमेल की समीक्षा पूर्ण' : 'All Intercepted Mails Reviewed'}</span>
+            </div>
+            <div style="text-align:center; padding:40px 20px; background:#F8FAFC; border:1px dashed var(--border-mid); border-radius:var(--radius);">
+              <div style="font-size:40px; margin-bottom:10px;">🛡️</div>
+              <h3 style="color:var(--gov-navy); font-size:16px;">${curLang === 'hi' ? 'समीक्षा कतार में कोई लंबित अवरुद्ध ईमेल नहीं है' : 'No Pending Blocked Mails in Review Queue'}</h3>
+              <p style="font-size:12.5px; color:var(--text-muted); margin:6px 0 16px;">
+                ${curLang === 'hi' ? 'सब-सेकंड फ़ायरवॉल द्वारा रोके गए सभी उच्च-जोखिम वाले इनबाउंड ईमेल की समीक्षा नोडल अधिकारियों द्वारा की जा चुकी है।' : 'All high-risk inbound emails intercepted by the sub-second firewall have been reviewed and audited by MeitY Nodal Officers.'}
+              </p>
+              <button class="tool-btn" style="padding:6px 14px; font-size:12px;" onclick="resetSimCases()">${curLang === 'hi' ? '⚡ नया इनबाउंड ब्लॉक ईमेल सिमुलेशन लोड करें' : '⚡ Generate New Inbound Blocked Mail Simulation'}</button>
+            </div>
+          `;
+        }
+
+        return `
+          <div class="panel-header">
+            <div>
+              <h2>${curLang === 'hi' ? '🚨 उच्च जोखिम ईमेल मानव समीक्षा बोर्ड' : '🚨 High-Risk Mail Human Review Board'}</h2>
+              <p style="font-size:12px; color:var(--text-muted); margin-top:2px;">
+                ${curLang === 'hi' ? '< 1 सेकंड में रोके गए ईमेल (जोखिम स्कोर > 75)। फोरेंसिक कारणों की जांच करें, फिर <strong>अनब्लॉक एवं जारी</strong> या <strong>ब्लॉक बनाए रखें</strong> चुनें।' : 'Inbound emails intercepted in < 1 sec with Risk Score > 75. Inspect forensic reasons, then <strong>Unblock & Release</strong> or <strong>Maintain Block</strong>.'}
+              </p>
+            </div>
+            <span class="tag-status tag-red" style="font-size:11.5px; padding:4px 10px;">${pendingCases.length} ${curLang === 'hi' ? 'निर्णय हेतु लंबित' : 'Cases Awaiting Decision'}</span>
+          </div>
+
+          ${pendingCases.map(c => `
+            <div class="review-case-card" id="card-${c.id}">
+              <div class="case-card-header">
+                <div>
+                  <strong style="color:var(--gov-navy); font-size:14px;">Case ${c.id}</strong> &bull;
+                  <span style="font-size:12px; color:var(--text-muted);">${curLang === 'hi' ? 'लक्षित प्राप्तकर्ता:' : 'Target:'} <strong>${c.recipient}</strong> (<code>${c.recipientEmail}</code>)</span>
+                </div>
+                <div>
+                  <span class="tag-status tag-red" style="font-size:11px;">⚠️ ${curLang === 'hi' ? 'जोखिम स्कोर:' : 'Risk Score:'} ${c.riskScore}/100</span>
+                  <span style="font-size:11.5px; color:var(--text-muted); margin-left:6px;">⏱️ ${c.interceptTime}</span>
+                </div>
+              </div>
+
+              <div class="case-card-body">
+                <div style="margin-bottom:8px;">
+                  <span style="font-size:11.5px; font-weight:700; color:var(--text-muted); text-transform:uppercase;">${curLang === 'hi' ? 'विषय:' : 'Subject:'}</span>
+                  <div style="font-size:13.5px; font-weight:700; color:var(--text-main);">${c.subject}</div>
+                </div>
+
+                <div style="display:flex; gap:20px; font-size:12px; color:var(--text-muted); margin-bottom:8px; flex-wrap:wrap;">
+                  <span><strong>${curLang === 'hi' ? 'प्रेषक:' : 'Sender:'}</strong> <code style="color:var(--alert-red);">${c.sender}</code></span>
+                  <span><strong>${curLang === 'hi' ? 'मूल आईपी:' : 'Origin IP:'}</strong> <code>${c.senderIp}</code></span>
+                  <span><strong>${curLang === 'hi' ? 'डोमेन आयु:' : 'Domain Age:'}</strong> ${c.domainAge}</span>
+                  <span><strong>${curLang === 'hi' ? 'समय:' : 'Timestamp:'}</strong> ${c.interceptTs}</span>
+                </div>
+
+                <div class="case-forensics-grid">
+                  <div>
+                    <strong>SPF Verification:</strong> <span style="color:var(--alert-red); font-weight:700;">${c.spf}</span><br>
+                    <strong>DKIM Signature:</strong> <span style="color:var(--alert-amber); font-weight:700;">${c.dkim}</span><br>
+                    <strong>DMARC Enforcement:</strong> <span style="color:var(--alert-red); font-weight:700;">${c.dmarc}</span>
+                  </div>
+                  <div>
+                    <strong>Target Entity:</strong> ${c.tenant}<br>
+                    <strong>Section 65B Hash:</strong> <code style="font-size:10.5px;">${c.hash65b.substring(0,24)}...</code><br>
+                    <strong>State:</strong> <span class="tag-status tag-red">${curLang === 'hi' ? 'गेटवे पर ऑटो-ब्लॉक्ड' : 'Auto-Blocked at Gateway'}</span>
+                  </div>
+                </div>
+
+                <div>
+                  <strong style="font-size:12px; color:var(--alert-red);">🔍 ${curLang === 'hi' ? 'ईमेल ब्लॉक करने के सटीक फोरेंसिक कारण:' : 'Exact Reasons Why System Blocked This Email:'}</strong>
+                  <ul class="reason-list">
+                    ${c.reasons.map(r => `<li class="reason-item"><span>❌</span><span>${r}</span></li>`).join('')}
+                  </ul>
+                </div>
+
+                <div class="case-actions-bar">
+                  <span style="font-size:12px; color:var(--text-muted); margin-right:auto;">${curLang === 'hi' ? 'सरकारी नोडल अधिकारी का निर्णय:' : 'Government Officer Decision:'}</span>
+                  <button class="btn-unblock" onclick="handleGovDecision('${c.id}', 'unblock')">
+                    ✅ ${curLang === 'hi' ? 'अनब्लॉक करें एवं प्राप्तकर्ता को भेजें' : 'Unblock & Release to Recipient'}
+                  </button>
+                  <button class="btn-keep-blocked" onclick="handleGovDecision('${c.id}', 'keep-blocked')">
+                    ⛔ ${curLang === 'hi' ? 'ब्लॉक बनाए रखें एवं ब्लैकलिस्ट करें' : 'Maintain Block & Blacklist'}
+                  </button>
+                </div>
+              </div>
+            </div>
+          `).join('')}
+        `;
+      }
+
+      window.handleGovDecision = function(caseId, action) {
+        var c = reviewCases.find(x => x.id === caseId);
+        if (!c) return;
+
+        if (action === 'unblock') {
+          c.status = 'Unblocked';
+          auditLog.unshift({
+            id: c.id,
+            mail: c.sender,
+            recipient: c.recipient,
+            decision: 'Unblocked & Released',
+            officer: 'Shri Rajesh Kumar (MeitY)',
+            ts: 'Just Now',
+            reason: 'Nodal Officer verified legitimate content & cleared false positive.'
+          });
+          showToast(`✅ Case ${caseId} Unblocked! Email safely delivered to ${c.recipient} with audit clearance note.`);
+        } else {
+          c.status = 'Confirmed Blocked';
+          auditLog.unshift({
+            id: c.id,
+            mail: c.sender,
+            recipient: c.recipient,
+            decision: 'Block Confirmed & Blacklisted',
+            officer: 'Shri Rajesh Kumar (MeitY)',
+            ts: 'Just Now',
+            reason: 'High-risk malicious campaign confirmed. Origin domain and IP blacklisted nationwide.'
+          });
+          showToast(`⛔ Case ${caseId} Block Confirmed! Domain & IP blacklisted across all 1,248 institutions.`);
+        }
+
+        updateCounts();
+        showGovTab('humanreview');
+      };
+
+      window.resetSimCases = function() {
+        reviewCases.forEach(c => c.status = 'Pending Review');
+        updateCounts();
+        showGovTab('humanreview');
+        showToast('⚡ Inbound threat simulation reloaded with 3 high-risk blocked emails.');
+      };
+
+      function renderAuditLogs() {
+        return `
+          <div class="panel-header">
+            <h2>📋 Human Review Audit Trail &amp; Legal Decisions (Section 65B)</h2>
+            <span style="font-size:12px; color:var(--text-muted);">Immutable Sovereign Audit Record</span>
+          </div>
+          <table class="gov-table">
+            <thead>
+              <tr>
+                <th>Case Ref</th>
+                <th>Sender Address</th>
+                <th>Target Recipient</th>
+                <th>Officer Decision</th>
+                <th>Reviewing Officer</th>
+                <th>Timestamp</th>
+                <th>Justification</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${auditLog.map(a => `
+                <tr>
+                  <td><strong>${a.id}</strong></td>
+                  <td><code>${a.mail}</code></td>
+                  <td><strong>${a.recipient}</strong></td>
+                  <td><span class="tag-status ${a.decision.includes('Unblocked') ? 'tag-green' : 'tag-red'}">${a.decision}</span></td>
+                  <td>${a.officer}</td>
+                  <td style="font-size:11.5px;">${a.ts}</td>
+                  <td style="font-size:11.5px; color:var(--text-muted);">${a.reason}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        `;
+      }
+
+      function renderNatQueue() {
+        return `
+          <div class="panel-header">
+            <h2>National Aggregated Threat Queue (Multi-Tenant)</h2>
+            <span style="font-size:12px; color:var(--text-muted);">Real-Time National Inbound Telemetry</span>
+          </div>
+          <table class="gov-table" aria-label="National Threat Queue">
+            <thead>
+              <tr>
+                <th>Case Ref</th>
+                <th>Target Institution / Ministry</th>
+                <th>Timestamp</th>
+                <th>Sender Address</th>
+                <th>Threat Score</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td><strong>MTX-CASE-9901</strong></td><td>Ministry of Finance</td><td style="font-size:12px;">25-Sep 11:50 IST</td><td><code>official-circular@finmin-nic-in.online</code></td><td><strong style="color:var(--alert-red);">98/100</strong></td><td><span class="tag-status tag-red">NCCC Escalated</span></td></tr>
+              <tr><td><strong>MTX-CASE-8841</strong></td><td>University of Delhi</td><td style="font-size:12px;">25-Sep 11:42 IST</td><td><code>no-reply@incometax-gov.in.top</code></td><td><strong style="color:var(--alert-red);">94/100</strong></td><td><span class="tag-status tag-red">Auto-Blocked</span></td></tr>
+              <tr><td><strong>MTX-CASE-9902</strong></td><td>IIT Bombay</td><td style="font-size:12px;">25-Sep 08:30 IST</td><td><code>no-reply@incometax-gov.in.top</code></td><td><strong style="color:var(--alert-red);">94/100</strong></td><td><span class="tag-status tag-red">Auto-Blocked</span></td></tr>
+              <tr><td><strong>MTX-CASE-9904</strong></td><td>AIIMS New Delhi</td><td style="font-size:12px;">24-Sep 22:15 IST</td><td><code>director.aiims-edu@proxy-mail.net</code></td><td><strong style="color:var(--alert-red);">91/100</strong></td><td><span class="tag-status tag-amber">Quarantined</span></td></tr>
+            </tbody>
+          </table>
+        `;
+      }
+
+      function renderLeaderboard() {
+        return `
+          <div class="panel-header"><h2>National Institution Leaderboard (DMARC Compliance)</h2></div>
+          <table class="gov-table">
+            <thead><tr><th>Institution</th><th>Domain</th><th>DMARC Enforcement</th><th>Open Cases</th><th>Last Incident</th></tr></thead>
+            <tbody>
+              <tr><td><strong>University of Delhi</strong></td><td><code>du.ac.in</code></td><td><span class="tag-status tag-green">100% (p=reject)</span></td><td><strong>3 Open</strong></td><td>25-Sep 11:42 IST</td></tr>
+              <tr><td><strong>IIT Bombay</strong></td><td><code>iitb.ac.in</code></td><td><span class="tag-status tag-green">100% (p=reject)</span></td><td><strong>2 Open</strong></td><td>25-Sep 08:30 IST</td></tr>
+              <tr><td><strong>AIIMS New Delhi</strong></td><td><code>aiims.edu</code></td><td><span class="tag-status tag-green">98.2% (p=quarantine)</span></td><td><strong>5 Open</strong></td><td>24-Sep 22:15 IST</td></tr>
+              <tr><td><strong>Banaras Hindu University</strong></td><td><code>bhu.ac.in</code></td><td><span class="tag-status tag-amber">94.0% (p=quarantine)</span></td><td><strong>8 Open</strong></td><td>24-Sep 19:40 IST</td></tr>
+              <tr><td><strong>NIT Trichy</strong></td><td><code>nitt.edu</code></td><td><span class="tag-status tag-green">100% (p=reject)</span></td><td><strong>1 Open</strong></td><td>23-Sep 17:05 IST</td></tr>
+            </tbody>
+          </table>
+        `;
+      }
+
+      function renderHotspots() {
+        return `
+          <div class="panel-header"><h2>State-Wise Reported Incident Distribution Table</h2></div>
+          <table class="gov-table">
+            <thead><tr><th>State / UT Region</th><th>30-Day Reported Volume</th><th>Threat Trend</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Delhi NCR</strong></td><td><strong>1,420 Incidents</strong></td><td style="color:var(--alert-red); font-weight:600;">▲ +12% (Elevated Campaign Activity)</td></tr>
+              <tr><td><strong>Maharashtra</strong></td><td><strong>1,180 Incidents</strong></td><td style="color:var(--alert-red); font-weight:600;">▲ +8% (Phishing Lures Targeting PSUs)</td></tr>
+              <tr><td><strong>Karnataka</strong></td><td><strong>940 Incidents</strong></td><td style="color:var(--india-green); font-weight:600;">▼ -4% (Stable Posture)</td></tr>
+              <tr><td><strong>Tamil Nadu</strong></td><td><strong>810 Incidents</strong></td><td style="color:var(--alert-red); font-weight:600;">▲ +15% (Educational Admission Lures)</td></tr>
+              <tr><td><strong>Uttar Pradesh</strong></td><td><strong>760 Incidents</strong></td><td style="color:var(--alert-red); font-weight:600;">▲ +6% (Subsidy Spoofing)</td></tr>
+            </tbody>
+          </table>
+        `;
+      }
+
+      function renderGovCampaigns() {
+        return `
+          <div class="panel-header"><h2>Cross-Tenant Multi-Institution Campaign Clusters</h2></div>
+          <table class="gov-table">
+            <thead><tr><th>Campaign ID</th><th>Threat Actor Signature</th><th>Correlated Scope</th><th>Response Status</th></tr></thead>
+            <tbody>
+              <tr><td><strong><code>CAMP-2026-ITX-41</code></strong></td><td>APT-X7 Look-alike IT Refunds (Kyiv node)</td><td>14 Institutions (DU, IITB, BHU, NIT-T)</td><td><span class="tag-status tag-red">CERT-In Gazette Dispatched</span></td></tr>
+              <tr><td><strong><code>CAMP-2026-BEC-09</code></strong></td><td>VIP Executive Wire Transfer Lures</td><td>8 Central Entities (AIIMS, DU, FinMin)</td><td><span class="tag-status tag-amber">Quarantined</span></td></tr>
+              <tr><td><strong><code>CAMP-2026-APT-X7</code></strong></td><td>Nation-State Macro Spear-Phishing</td><td>Ministry of Finance, MeitY</td><td><span class="tag-status tag-red">NCCC Escalated</span></td></tr>
+            </tbody>
+          </table>
+        `;
+      }
+
+      function renderGazette() {
+        return `
+          <div class="panel-header"><h2>CERT-In Emergency Gazette Dispatch Authority</h2></div>
+          <div style="background:#FEF2F2; border:1px solid #FECACA; padding:18px; border-radius:var(--radius); margin-bottom:16px;">
+            <strong style="color:var(--alert-red); font-size:14px;">🚨 Dispatch Advisory: CAMP-2026-ITX-41</strong>
+            <p style="font-size:13px; color:#7F1D1D; margin:6px 0 12px; line-height:1.6;">
+              Dispatches emergency block directive across all 1,248 onboarded institutional mail gateways and coordinates DNS blackholing with NIXI.
+            </p>
+            <button class="btn-keep-blocked" onclick="alert('CERT-In Emergency Gazette Dispatched to all 1,248 Institutions!')">
+              ⚡ Dispatch National Advisory Now
+            </button>
+          </div>
+        `;
+      }
+
+      var savedLang = localStorage.getItem('mailtracex_lang') || 'en';
+      setLanguage(savedLang);
+      updateCounts();
+    })();
+  </script>
+</body>
+</html>
